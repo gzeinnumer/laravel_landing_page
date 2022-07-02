@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\KelompokController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,10 +15,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+use App\Http\Controllers\LandingController;
+
+Route::get('/', [LandingController::class, 'index'])->name('landing.index');
+
+Route::prefix('dashboardv2')->group(function () {
+    Route::get('/', [DashboardController::class, 'index'])->name('dashboardv2.index');
 });
 
-Route::get('/landingv2', function () {
-    return view('landingv2.index');
+Route::prefix('kelompok')->group(function () {
+    Route::get('/getdata', [KelompokController::class, 'getData'])->name('kelompok.getdata');
 });
