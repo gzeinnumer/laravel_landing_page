@@ -717,7 +717,6 @@ https://templatemo.com/tm-570-chain-app-dev
     </div>
   </footer>
 
-
   <!-- Scripts -->
   <script src="{{asset('landing/vendor/jquery/jquery.min.js')}}"></script>
   <script src="{{asset('landing/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
