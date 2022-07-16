@@ -8,7 +8,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0">Kelompok</h1>
+                    <h1 class="m-0">Tugas</h1>
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
@@ -30,7 +30,7 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                            <h3 class="card-title">Detail Kelompok</h3>
+                            <h3 class="card-title">Detail Tugas</h3>
 
                             <div class="card-tools">
 
@@ -40,12 +40,20 @@
                         <form action="" method="POST">
                             <div class="modal-body">
                                 <div class="form-group">
-                                    <label for="kelompok">Kelompok</label>
-                                    <input type="text" class="form-control" id="kelompok" name="kelompok" placeholder="Nama Kelompok" value="{{ $data->kelompok }}" required readonly>
+                                    <label for="nama_penugasan">Tugas</label>
+                                    <input type="text" class="form-control" id="nama_penugasan" name="nama_penugasan" placeholder="Nama Nama Penugasan" value="{{ $data->nama_penugasan }}" required readonly>
                                 </div>
                                 <div class="form-group">
-                                    <label for="link_grup">Link Grup</label>
-                                    <input type="text" class="form-control" id="link_grup" name="link_grup" placeholder="Link Grup" value="{{ $data->link_grup }}" required readonly>
+                                    <label for="detail">Details</label>
+                                    <textarea type="text" class="form-control" id="detail" name="detail" placeholder="Details" required readonly>{{ $data->detail }}</textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="link_submit">Link Submit</label>
+                                    <input type="text" class="form-control" id="link_submit" name="link_submit" placeholder="Link Submit" value="{{ $data->link_submit }}" required readonly>
+                                </div>
+                                <div class="form-group">
+                                    <label for="deadline">Deadline</label>
+                                    <input type="text" class="form-control" id="deadline" name="deadline" placeholder="Deadline" value="{{ $data->deadline }}" required readonly>
                                 </div>
                             </div>
                         </form>
@@ -54,6 +62,7 @@
                 </div>
             </div>
         </div><!-- /.container-fluid -->
+
     </section>
     <!-- /.content -->
 </div>

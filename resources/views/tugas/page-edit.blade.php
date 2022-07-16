@@ -8,7 +8,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0">Kelompok</h1>
+                    <h1 class="m-0">Tugas</h1>
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
@@ -30,23 +30,35 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                            <h3 class="card-title">Detail Kelompok</h3>
+                            <h3 class="card-title">Detail Tugas</h3>
 
                             <div class="card-tools">
 
                             </div>
                         </div>
 
-                        <form action="" method="POST">
+                        <form action="{{ route('tugas.edit', ['id' => $data->id]) }}" method="POST">
+                            @csrf
                             <div class="modal-body">
                                 <div class="form-group">
-                                    <label for="kelompok">Kelompok</label>
-                                    <input type="text" class="form-control" id="kelompok" name="kelompok" placeholder="Nama Kelompok" value="{{ $data->kelompok }}" required readonly>
+                                    <label for="nama_penugasan">Nama Penugasan</label>
+                                    <input type="text" class="form-control" id="nama_penugasan" name="nama_penugasan" placeholder="Nama Nama Penugasan" value="{{ $data->nama_penugasan }}" required>
                                 </div>
                                 <div class="form-group">
-                                    <label for="link_grup">Link Grup</label>
-                                    <input type="text" class="form-control" id="link_grup" name="link_grup" placeholder="Link Grup" value="{{ $data->link_grup }}" required readonly>
+                                    <label for="detail">Detail</label>
+                                    <textarea type="text" class="form-control" id="detail" name="detail" placeholder="Detail" required>{{$data->detail}}</textarea>
                                 </div>
+                                <div class="form-group">
+                                    <label for="link_submit">Link Submit</label>
+                                    <input type="text" class="form-control" id="link_submit" name="link_submit" placeholder="Link Grup" value="{{ $data->link_submit }}" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="deadline">Deadline</label>
+                                    <input type="text" class="form-control" id="deadline" name="deadline" placeholder="Deadline" value="{{ $data->deadline }}" required>
+                                </div>
+                            </div>
+                            <div class="modal-footer justify-content-between">
+                                <button type="submit" class="btn btn-primary">Simpan</button>
                             </div>
                         </form>
                     </div>
@@ -54,6 +66,9 @@
                 </div>
             </div>
         </div><!-- /.container-fluid -->
+
+        @include('tugas.modal-add')
+
     </section>
     <!-- /.content -->
 </div>

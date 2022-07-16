@@ -8,7 +8,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0">Kelompok</h1>
+                    <h1 class="m-0">User</h1>
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
@@ -31,7 +31,7 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                            <h3 class="card-title">List Kelompok</h3>
+                            <h3 class="card-title">List User</h3>
 
                             <div class="card-tools">
                                 <div class="input-group input-group-sm" style="width: 150px;">
@@ -47,25 +47,29 @@
                         </div>
                         <!-- /.card-header -->
                         <div class="card-body table-responsive p-0">
-                            <table class="table table-hover text-nowrap">
+                            <table class="table table-hover text-wrap">
                                 <thead>
                                     <tr>
-                                        <th>ID</th>
+                                        <th>Name</th>
+                                        <th>Email</th>
+                                        <th>Nama Lengkap</th>
+                                        <th>Nim</th>
                                         <th>Kelompok</th>
-                                        <th>Link Grup</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     @foreach($data as $d)
                                     <tr>
-                                        <td>{{$d->id}}</td>
-                                        <td>{{$d->kelompok}}</td>
-                                        <td>{{$d->link_grup}}</td>
+                                        <td>{{$d->name}}</td>
+                                        <td>{{$d->email}}</td>
+                                        <td>{{$d->nama_lengkap}}</td>
+                                        <td>{{$d->nim}}</td>
+                                        <td>{{$d->id_kelompok}}</td>
                                         <td>
-                                            <a href="{{ route('kelompok.delete' , [ 'id' => $d->id ]) }}" class="btn btn-block btn-danger btn-xs">Danger</a>
-                                            <a href="{{ route('kelompok.detailinfo' , [ 'id' => $d->id ]) }}" class="btn btn-block btn-primary btn-xs">Info</a>
-                                            <a href="{{ route('kelompok.detailedit' , [ 'id' => $d->id ]) }}" class="btn btn-block btn-warning btn-xs">Edit</a>
+                                            <a href="{{ route('user.delete' , [ 'id' => $d->id ]) }}" class="btn btn-block btn-danger btn-xs">Danger</a>
+                                            <a href="{{ route('user.detailinfo' , [ 'id' => $d->id ]) }}" class="btn btn-block btn-primary btn-xs">Info</a>
+                                            <a href="{{ route('user.detailedit' , [ 'id' => $d->id ]) }}" class="btn btn-block btn-warning btn-xs">Edit</a>
                                         </td>
                                     </tr>
                                     @endforeach
@@ -79,7 +83,7 @@
             </div>
         </div><!-- /.container-fluid -->
 
-        @include('kelompok.modal-add')
+        @include('user.modal-add')
 
     </section>
     <!-- /.content -->
