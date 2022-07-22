@@ -29,6 +29,30 @@
                         </p>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a href="{{ route('tugas.index') }}" class="nav-link">
+                        <i class="nav-icon far fa-image"></i>
+                        <p>
+                            Tugas
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('user.index') }}" class="nav-link">
+                        <i class="nav-icon far fa-image"></i>
+                        <p>
+                            Keluarga Baru
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('penilaian.index') }}" class="nav-link">
+                        <i class="nav-icon far fa-image"></i>
+                        <p>
+                            Penilaian
+                        </p>
+                    </a>
+                </li>
             </ul>
         </nav>
         <!-- /.sidebar-menu -->

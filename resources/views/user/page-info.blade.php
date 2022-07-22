@@ -1,0 +1,139 @@
+@extends('layouts.master-dashboard')
+
+@section('content')
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1 class="m-0">User</h1>
+                </div><!-- /.col -->
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item active">Dashboard v1</li>
+                    </ol>
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+        </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Detail User</h3>
+                        </div>
+
+                        <form action="" method="POST">
+                            
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <label for="name">Name</label>
+                                    <input type="text" class="form-control" id="name" name="name" placeholder="Nama Penugasan" required readonly value="{{ $data->name }}">
+                                </div>
+                            </div>
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="Email" required readonly value="{{ $data->email }}">
+                                </div>
+                            </div>
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <label for="password">Password</label>
+                                    <input type="password" class="form-control" id="password" name="password" placeholder="Password" required readonly>
+                                </div>
+                            </div>
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <label for="nama_lengkap">Nama Lengkap</label>
+                                    <input type="text" class="form-control" id="nama_lengkap" name="nama_lengkap" placeholder="Nama Lengkap" required readonly value="{{ $data->nama_lengkap }}">
+                                </div>
+                            </div>
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <label for="nim">NIM</label>
+                                    <input type="text" class="form-control" id="nim" name="nim" placeholder="NIM" required readonly value="{{ $data->nim }}">
+                                </div>
+                            </div>
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <label for="alamat_asal">Alamat Asal</label>
+                                    <input type="text" class="form-control" id="alamat_asal" name="alamat_asal" placeholder="Alamat Asal" required readonly value="{{ $data->alamat_asal }}">
+                                </div>
+                            </div>
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <label for="alamat_malang">Alamat Malang</label>
+                                    <input type="text" class="form-control" id="alamat_malang" name="alamat_malang" placeholder="Alamat Malang" required readonly value="{{ $data->alamat_malang }}">
+                                </div>
+                            </div>
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <label for="tempat_lahir">Tempat Lahir</label>
+                                    <input type="text" class="form-control" id="tempat_lahir" name="tempat_lahir" placeholder="Tempat Lahir" required readonly value="{{ $data->tempat_lahir }}">
+                                </div>
+                            </div>
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <label for="tanggal_lahir">Tanggal Lahir</label>
+                                    <input type="date" class="form-control" id="tanggal_lahir" name="tanggal_lahir" placeholder="Tanggal Lahir" required readonly value="{{ $data->tanggal_lahir }}">
+                                </div>
+                            </div>
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <label for="jenis_kelamin">Jenis Kelamin</label>
+                                    <select name="jenis_kelamin" class="form-control" aria-label="Default select example" disabled>
+                                        <option disabled selected value="">Select Jenis kelamin</option>
+                                        <option   value="Laki-laki" @if($data->jenis_kelamin=="Laki-laki") selected @endif>Laki-Laki</option>
+                                        <option   value="Perempuan"@if($data->jenis_kelamin=="Perempuan") selected @endif>Perempuan</option>                                      
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <label for="agama">Agama</label>
+                                    <input type="text" class="form-control" id="agama" name="agama" placeholder="Agama" required readonly value="{{ $data->agama }}">
+                                </div>
+                            </div>
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <label for="no_hp">No Handphone</label>
+                                    <input type="text" class="form-control" id="no_hp" name="no_hp" placeholder="No Handphone" required readonly value="{{ $data->no_hp }}">
+                                </div>
+                            </div>
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <label for="id_kelompok">Kelompok</label>
+                                    <select name="id_kelompok" class="form-control" aria-label="Default select example" disabled>
+                                        <option disabled selected value="">Select Kelompok</option>
+                                        @foreach($kelompok as $d)
+                                        <option value="{{$d->id}}"@if($data->id_kelompok==$d->id) selected @endif>{{$d->kelompok}}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
+                           
+                        </form>
+                    </div>
+                    <!-- /.card -->
+                </div>
+            </div>
+        </div><!-- /.container-fluid -->
+
+        @include('user.modal-add')
+
+    </section>
+    <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
+@stop
