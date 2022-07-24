@@ -29,7 +29,6 @@ class TugasController extends Controller
         $data = new TugasModel();
         $data->nama_penugasan = $r->nama_penugasan;
         $data->detail = $r->detail;
-        $data->detail = $r->detail;
         $data->link_submit = $r->link_submit;
         $data->deadline = $r->deadline;
         $data->save();
@@ -40,7 +39,7 @@ class TugasController extends Controller
     public function delete($id)
     {
         $data = TugasModel::find($id);
-        // $data = TugasModel::where(["id" => $id])->first();
+
         $data->delete();
 
         return redirect()->route('tugas.index');
@@ -69,7 +68,6 @@ class TugasController extends Controller
         // return $r->all();
         $data = TugasModel::find($id);
         $data->nama_penugasan = $r->nama_penugasan;
-        $data->detail = $r->detail;
         $data->detail = $r->detail;
         $data->link_submit = $r->link_submit;
         $data->deadline = $r->deadline;

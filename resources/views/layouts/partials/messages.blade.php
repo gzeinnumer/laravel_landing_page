@@ -23,4 +23,5 @@
             {{ $data }}
         </div>
     @endif
+
 @endif

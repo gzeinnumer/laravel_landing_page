@@ -54,9 +54,6 @@
                 </div>
             </div>
         </div><!-- /.container-fluid -->
-
-        @include('kelompok.modal-add')
-
     </section>
     <!-- /.content -->
 </div>

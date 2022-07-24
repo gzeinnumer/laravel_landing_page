@@ -12,13 +12,9 @@
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <div class="row">
-                            <div class="col-12">
-                                <button type="button" class="btn btn-default" data-toggle="modal" data-target="#modal-add">
-                                    Tambah Data
-                                </button>
-                            </div>
-                        </div>
+                        <button type="button" class="btn btn-default" data-toggle="modal" data-target="#modal-add">
+                            Tambah Data
+                        </button>
                     </ol>
                 </div><!-- /.col -->
             </div><!-- /.row -->
@@ -59,7 +55,8 @@
                                         <th>Nama Penugasan</th>
                                         <th>Detail</th>
                                         <th>Link Submit</th>
-                                        <th>Deadline</th>
+                                        <th>deadline</th>
+                                        <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -67,7 +64,6 @@
                                     <tr>
                                         <td>{{$d->id}}</td>
                                         <td>{{$d->nama_penugasan}}</td>
-                                    
                                         <td>{{$d->detail}}</td>
                                         <td>{{$d->link_submit}}</td>
                                         <td>{{$d->deadline}}</td>

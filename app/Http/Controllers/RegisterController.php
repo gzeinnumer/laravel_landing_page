@@ -27,6 +27,7 @@ class RegisterController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function register(RegisterRequest $request) 
+
     {
         $user = User::create($request->validated());
 
@@ -34,4 +35,5 @@ class RegisterController extends Controller
 
         return redirect('/')->with('success', "Account successfully registered.");
     }
+
 }

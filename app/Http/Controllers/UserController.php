@@ -43,7 +43,6 @@ class UserController extends Controller
         $data->agama = $r->agama;
         $data->no_hp = $r->no_hp;
         $data->id_kelompok = $r->id_kelompok;
-
         $data->save();
 
         return redirect()->route('user.index');
@@ -52,7 +51,6 @@ class UserController extends Controller
     public function delete($id)
     {
         $data = User::find($id);
-        // $data = UserModel::where(["id" => $id])->first();
         $data->delete();
 
         return redirect()->route('user.index');
@@ -86,6 +84,7 @@ class UserController extends Controller
         $data = User::find($id);
         $data->name = $r->name;
         $data->email = $r->email;
+
 
         // IMPORTANTO FOR PASSWORD
         if ($r->password != ""){

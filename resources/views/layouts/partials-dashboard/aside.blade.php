@@ -41,15 +41,9 @@
                     <a href="{{ route('user.index') }}" class="nav-link">
                         <i class="nav-icon far fa-image"></i>
                         <p>
-                            Keluarga Baru
-                        </p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="{{ route('penilaian.index') }}" class="nav-link">
-                        <i class="nav-icon far fa-image"></i>
-                        <p>
-                            Penilaian
+
+                            User
+
                         </p>
                     </a>
                 </li>

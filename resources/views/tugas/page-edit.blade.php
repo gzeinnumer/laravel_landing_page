@@ -55,6 +55,7 @@
                                 <div class="form-group">
                                     <label for="deadline">Deadline</label>
                                     <input type="date" class="form-control" id="deadline" name="deadline" placeholder="Deadline" required value="{{ $data->deadline }}">
+
                                 </div>
                             </div>
                             <div class="modal-footer justify-content-between">

@@ -12,13 +12,10 @@
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <div class="row">
-                            <div class="col-12">
-                                <button type="button" class="btn btn-default" data-toggle="modal" data-target="#modal-add">
-                                    Tambah Data
-                                </button>
-                            </div>
-                        </div>
+
+                        <button type="button" class="btn btn-default" data-toggle="modal" data-target="#modal-add">
+                            Tambah Data
+                        </button>
                     </ol>
                 </div><!-- /.col -->
             </div><!-- /.row -->
@@ -55,19 +52,22 @@
                             <table class="table table-hover text-wrap">
                                 <thead>
                                     <tr>
-                                        
+
                                         <th>Name</th>
                                         <th>Email</th>
                                         <th>Nama Lengkap</th>
-                                        <th>NIM</th>
+                                        <th>Nim</th>
                                         <th>Kelompok</th>
+                                        <th>Action</th>
+                                    </tr>
+
                                 </thead>
                                 <tbody>
                                     @foreach($data as $d)
                                     <tr>
                                         
                                         <td>{{$d->name}}</td>
-                                    
+                                
                                         <td>{{$d->email}}</td>
                                         <td>{{$d->nama_lengkap}}</td>
                                         <td>{{$d->nim}}</td>

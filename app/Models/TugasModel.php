@@ -11,5 +11,6 @@ class TugasModel extends Model
     use HasFactory;
     protected $table = "tugas";
     protected $fillable = ["nama_penugasan", "detail", "link_submit","deadline","created_at", "updated_at"];
+
     protected $casts = MyApp::datetime;
 }
