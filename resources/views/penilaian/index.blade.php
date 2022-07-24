@@ -57,7 +57,7 @@
                                     <tr>
                                         <th>ID</th>
                                         <th>id_user</th>
-                                        {{-- <th>NIM</th> --}}
+                                        <th>NIM</th>
                                         <th>Nilai 1</th>
                                         <th>Nilai 2</th>
                                         <th>Nilai 3</th>
@@ -69,15 +69,14 @@
                                     @foreach($data as $d)
                                     <tr>
                                         <td>{{$d->id}}</td>
-                                        <td>{{$d->id_user}}</td>
-                                        {{-- <td>{{$user->nama_lengkap}}</td>
-                                        <td>{{$user->nim}}</td> --}}
+                                        <td>{{$d->id_user}}
+                                        <td>{{$d->nim}}</td>
                                         <td>{{$d->nilai1}}</td>
                                         <td>{{$d->nilai2}}</td>
                                         <td>{{$d->nilai3}}</td>
                                         <td>{{$d->nilai4}}</td>
+                                        
                                         <td>
-                                            <a href="{{ route('penilaian.delete' , [ 'id' => $d->id ]) }}" class="btn  btn-danger ">Delete</a>
                                             <a href="{{ route('penilaian.detailinfo' , [ 'id' => $d->id ]) }}" class="btn  btn-primary ">Info</a>
                                             <a href="{{ route('penilaian.detailedit' , [ 'id' => $d->id ]) }}" class="btn  btn-warning ">Edit</a>
                                         </td>

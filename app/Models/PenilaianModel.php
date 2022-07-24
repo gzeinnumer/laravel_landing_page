@@ -12,4 +12,8 @@ class PenilaianModel extends Model
     protected $table = "penilaian";
     protected $fillable = ["id_user", "nilai1", "nilai1","nilai2","nilai3","nilai4","created_at", "updated_at"];
     protected $casts = MyApp::datetime;
+
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
 }

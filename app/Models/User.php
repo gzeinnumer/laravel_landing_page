@@ -47,4 +47,10 @@ class User extends Authenticatable
     {
     $this->attributes['password'] = bcrypt($value);
     }
+
+    public function penilaian()
+    {
+        return $this->belongsTo(PenilaianModel::class);
+    }
+
 }
