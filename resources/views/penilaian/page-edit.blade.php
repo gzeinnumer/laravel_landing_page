@@ -75,7 +75,7 @@
             </div>
         </div><!-- /.container-fluid -->
 
-        {{-- @include('penilaian.modal-add') --}}
+        @include('penilaian.modal-add')
 
     </section>
     <!-- /.content -->

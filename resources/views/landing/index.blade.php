@@ -11,8 +11,8 @@
 
 @include('landing.banner')
 @include('landing.services')
-@include('landing.about')
+{{-- @include('landing.about')
 @include('landing.client')
-@include('landing.pricing')
+@include('landing.pricing') --}}
 
 @stop

@@ -114,7 +114,7 @@ Route::group(['middleware' => ['auth']], function () {
             Route::post('/edit/{id}', [KelompokController::class, 'edit'])->name('kelompok.edit');
         });
     
-        // TUGAS
+        // Tugas
         Route::prefix('tugas')->group(function () {
     
             Route::get('/', [TugasController::class, 'index'])->name('tugas.index');

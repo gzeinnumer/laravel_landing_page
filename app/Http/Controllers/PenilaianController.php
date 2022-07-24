@@ -11,8 +11,11 @@ class PenilaianController extends Controller
 {
     public function index()
     {
+//         $crashedCarIds = CrashedCar::pluck('car_id')->all();
+// $cars = Car::whereNotIn('id', $crashedCarIds)->select(...)->get();
         $data = $this->getData();
-        $user = User::all();
+        $temp=PenilaianModel::pluck('id_user')->all();
+        $user = User::whereNotIn('id',$temp)->get();
         $sent = [
             "data" => $data,
             "user" => $user
@@ -36,10 +39,11 @@ class PenilaianController extends Controller
     {
         // return $r->all();
         $data = new PenilaianModel();
+        $data->id_user = $r->id_user;
         $data->nilai1 = $r->nilai1;
-        $data->nilai1 = $r->nilai2;
-        $data->nilai1 = $r->nilai3;
-        $data->nilai1 = $r->nilai4;
+        $data->nilai2 = $r->nilai2;
+        $data->nilai3 = $r->nilai3;
+        $data->nilai4 = $r->nilai4;
         
         $data->save();
 
