@@ -58,6 +58,7 @@
                                         <th>ID</th>
                                         <th>id_user</th>
                                         <th>NIM</th>
+                                        <th>Nama Lengkap</th>
                                         <th>Nilai 1</th>
                                         <th>Nilai 2</th>
                                         <th>Nilai 3</th>
@@ -70,7 +71,8 @@
                                     <tr>
                                         <td>{{$d->id}}</td>
                                         <td>{{$d->id_user}}
-                                        <td>{{$d->nim}}</td>
+                                        <td>{{$d->users->nim}}</td>
+                                        <td>{{$d->users->nama_lengkap}}</td>
                                         <td>{{$d->nilai1}}</td>
                                         <td>{{$d->nilai2}}</td>
                                         <td>{{$d->nilai3}}</td>

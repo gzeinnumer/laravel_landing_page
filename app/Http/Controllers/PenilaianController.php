@@ -24,6 +24,11 @@ class PenilaianController extends Controller
     {
         // return "data";
         $data = PenilaianModel::all();
+
+        //looping buat ngambil data dari tabel lain satu satu (lebih praktis dari belongs to dll)
+        for ($i=0; $i < count($data); $i++) { 
+            $data[$i]->users=User::find($data[$i]->id_user);
+        }
         return $data;
     }
 
@@ -53,6 +58,8 @@ class PenilaianController extends Controller
     public function detailInfo($id)
     {
         $data = PenilaianModel::find($id);
+        // ambil 1 baris data
+        $data->users=User::find($data->id_user);
         $user = User::all();
         $sent = [
             "data" => $data,
@@ -63,7 +70,8 @@ class PenilaianController extends Controller
 
     public function detailEdit($id)
     {
-        $data = $this->getData();
+        $data = PenilaianModel::find($id);
+        $data->users=User::find($data->id_user);
         $user = User::all();
         $sent = [
             "data" => $data,
@@ -77,9 +85,9 @@ class PenilaianController extends Controller
         // return $r->all();
         $data = PenilaianModel::find($id);
         $data->nilai1 = $r->nilai1;
-        $data->nilai1 = $r->nilai2;
-        $data->nilai1 = $r->nilai3;
-        $data->nilai1 = $r->nilai4;
+        $data->nilai2 = $r->nilai2;
+        $data->nilai3 = $r->nilai3;
+        $data->nilai4 = $r->nilai4;
         
         $data->save();
 
