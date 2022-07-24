@@ -2,16 +2,10 @@
 
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\KelompokController;
-use App\Http\Controllers\TugasController;
-use App\Http\Controllers\UserController;
 use App\Http\Controllers\PenilaianController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\LandingController;
 
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\LoginController;
-use App\Http\Controllers\LogoutController;
-use App\Http\Controllers\RegisterController;
+
 
 
 /*
@@ -103,7 +97,7 @@ Route::group(['middleware' => ['auth']], function () {
             Route::post('/edit/{id}', [UserController::class, 'edit'])->name('user.edit');
         });
     });
-});
+}); 
 
 Route::group(['middleware' => ['auth']], function () {
     Route::get('/soon', [HomeController::class, 'index'])->name('soon');
