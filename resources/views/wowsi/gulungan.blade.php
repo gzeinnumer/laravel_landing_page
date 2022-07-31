@@ -11,14 +11,14 @@
     </div>
     <!-- yputube -->
     <div class="me-auto ms-auto mt-4 mb-4">
-      <iframe class="youtube" frameborder="0" scrolling="no" marginheight="" marginwidth="0" type="text/html" src="https://www.youtube.com/embed/DBXH9jJRaDk?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&origin=https://youtubeembedcode.com"
-        ><div>
+      <iframe class="youtube" frameborder="0" scrolling="no" marginheight="" marginwidth="0" type="text/html" src="https://www.youtube.com/embed/DBXH9jJRaDk?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&origin=https://youtubeembedcode.com">
+        <div>
           <small><a href="https://youtubeembedcode.com/de/">youtubeembedcode de</a></small>
         </div>
         <div>
           <small><a href="https://betting-utan-licens.nu/">betting-utan-licens.nu</a></small>
-        </div></iframe
-      >
+        </div>
+      </iframe>
     </div>
     <!-- end of youtube -->
 
@@ -73,19 +73,27 @@
   <div class="kelompok" id="kelompok">
     <div class="row pb-lg-5 p-5">
       <div class="col-sm-3 mt-3"><img src="asset/guardian.png" width="100%" alt="" /></div>
+
       <div class="col-sm-6 mt-auto mb-auto">
-        <label for="cari" class="fw-bold fs-2 mb-3">You will need a party to pass this journey. Find your party here!</label>
-        <div class="input-group search">
-          <input id="cari" type="text" class="form-control" placeholder="Masukkan NIM kamu" name="nimkelompok" />
-          <div class="input-group-append" id="carikelompok">
-            <button class="rounded-end btn-dark btn" style="border-radius: 0px" type="submit" name="submit2">
-              <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
+        <form action="{{route('wowsi.search')}}" method="GET">
+          <label for="cari" class="fw-bold fs-2 mb-3">You will need a party to pass this journey. Find your party here!</label>
+          <div class="input-group search">
+            <input id="cari" type="text" class="form-control" placeholder="Masukkan NIM kamu" name="nimkelompok" />
+            <div class="input-group-append" id="carikelompok">
+              <button class="rounded-end btn-dark btn" style="border-radius: 0px" type="submit" name="submit2">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+            </div>
           </div>
-        </div>
+        </form>
       </div>
       <div class="col-sm-3 mt-3"><img src="asset/guardiankanan.png" alt="" width="100%" /></div>
     </div>
+    <p>
+      @if($datas!=null)
+      {{$datas->kelompoks->kelompok}}
+      @endif
+    </p>
   </div>
   <!-- end of kelompok -->
 </div>
