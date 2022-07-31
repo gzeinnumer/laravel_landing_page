@@ -1,0 +1,96 @@
+body {
+  background: url("/asset/background.png");
+  
+  background-size: 100% auto;
+  background-repeat: repeat-y;
+}
+
+.borklat {
+  border-color: #b9a07e;
+}
+.bgUtama {
+  background-color: #e2cba4;
+}
+
+.bg-kertas {
+  background-color: #f0e7d7;
+  border-right: 10px solid #b9a07e;
+  border-left: 10px solid #b9a07e;
+}
+.txt-shadow {
+  text-shadow: 3px 3px 10px black;
+}
+.bg-achievment {
+  background-color: #f0e7d7;
+  border: 10px solid #b9a07e;
+}
+.fw-nilai {
+  font-size: 500%;
+  font-weight: bold;
+}
+.txt-tittle {
+  font-size: 4em;
+  color: white;
+}
+.txt-tittle2 {
+  font-size: 64px;
+  color: black;
+}
+.txt-tittle3 {
+  font-size: 96px;
+  color: black;
+}
+.dumbler {
+  width: 400px;
+}
+.w-90 {
+  width: 90%;
+}
+@media screen {
+}
+@media screen and (max-width: 800px) {
+  .txt-tittle {
+    font-size: 3em;
+  }
+  .txt-tittle3 {
+    font-size: 5em;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .dumbler {
+    width: 300px;
+  }
+  .youtube {
+    width: 200px;
+    height: 128px;
+  }
+}
+
+.p-head {
+  padding-top: 150px;
+}
+
+.bg-blue {
+  background-image: url("/asset/BgHomeAtas.png");
+  background-size: 105% 100%; 
+  z-index: -1;
+  margin-left: -20px;
+  padding-bottom: 100px;
+}
+
+.kotak {
+  width: 172px;
+  height: 194px;
+  background-color: aqua;
+}
+.hitam {
+  color: #464543;
+}
+.youtube {
+  width: 60%;
+  aspect-ratio: 16/9;
+}
+
+.marginbottom {
+  margin-bottom: 100px;
+}

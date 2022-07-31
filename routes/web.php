@@ -11,6 +11,12 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\WowsiController;
+use App\Http\Controllers\PenugasanController;
+use App\Http\Controllers\EditAkunController;
+
+
+
 
 Route::group(['middleware' => ['guest']], function () {
     Route::get('/', [LandingController::class, 'index'])->name('landing.index');
@@ -83,10 +89,18 @@ Route::group(['middleware' => ['auth']], function () {
     });
 }); 
 
+
 Route::group(['middleware' => ['auth']], function () {
     Route::get('/soon', [HomeController::class, 'index'])->name('soon');
 
-    
+    // WOWSI
+    Route::get('/wowsi', [WowsiController::class, 'index'])->name('wowsi.index');
+    // Penugasan WOWSI
+    Route::get('/penugasan', [PenugasanController::class, 'index'])->name('wowsi-penugasan.index');
+    // Edit AKun WOWSI
+    Route::get('/editakun', [EditAkunController::class, 'index'])->name('wowsi-editakun.index');
+
+
     Route::get('/', [LandingController::class, 'index'])->name('landing.index');
 
     Route::get('/logout', [LogoutController::class, 'perform'])->name('logout.perform');
@@ -173,6 +187,9 @@ Route::group(['middleware' => ['auth']], function () {
     });
 
 });
+
+
+
 
 
 
