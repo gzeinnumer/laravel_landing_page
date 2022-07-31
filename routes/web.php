@@ -95,10 +95,13 @@ Route::group(['middleware' => ['auth']], function () {
 
     // WOWSI
     Route::get('/wowsi', [WowsiController::class, 'index'])->name('wowsi.index');
+    Route::get('/wowsisearch', [WowsiController::class, 'searchByNim'])->name('wowsi.search');
     // Penugasan WOWSI
     Route::get('/penugasan', [PenugasanController::class, 'index'])->name('wowsi-penugasan.index');
     // Edit AKun WOWSI
     Route::get('/editakun', [EditAkunController::class, 'index'])->name('wowsi-editakun.index');
+    Route::post('/performeditakun', [EditAkunController::class, 'editdata'])->name('wowsi-editakun.perform');
+    
 
 
     Route::get('/', [LandingController::class, 'index'])->name('landing.index');
