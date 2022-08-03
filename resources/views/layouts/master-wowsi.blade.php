@@ -10,6 +10,8 @@
 
   <body>
 
+    @yield('extra_modal2')
+
     @yield('content-wowsi')
 
 

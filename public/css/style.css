@@ -71,17 +71,22 @@ body {
 }
 
 .bg-blue {
-  background-image: url("/asset/BgHomeAtas.png");
-  background-size: 105% 100%; 
+  background-image: url("/asset/BgHomeAtas.svg");
+  background-size: cover;
+  min-height: 115vh;
   z-index: -1;
-  margin-left: -20px;
-  padding-bottom: 100px;
+}
+
+.bg-blue2 {
+  background-image: url("/asset/BgHomeAtas2.svg");
+  background-size: cover;
+  min-height: 100vh;
 }
 
 .kotak {
   width: 172px;
   height: 194px;
-  background-color: aqua;
+  /* background-color: aqua; */
 }
 .hitam {
   color: #464543;
@@ -93,4 +98,55 @@ body {
 
 .marginbottom {
   margin-bottom: 100px;
+}
+
+.button-kanan{
+  float: right;
+}
+
+.button-tengah{
+  justify-content: center;
+}
+
+.background-modal{
+  background-color: #7A7AE9;
+  border-radius: 35px;
+}
+
+
+.tombol {
+  text-decoration: none;
+  color: #ffff;
+  font-weight: bold;
+  font-size: 20px;
+  display: inline-block;
+  padding: 10px 100px;
+  background-color: #ED8D35;
+}
+
+.tombol:hover {
+  color: #464543;
+
+}
+
+.tombol:active {
+  transform: translate(1px, 2px);
+}
+
+.tombol2 {
+  text-decoration: none;
+  color: #ffff;
+  font-weight: 650;
+  font-size: 18px;
+  display: inline-block;
+  padding: 5px 30px;
+  background-color: #ED8D35;
+}
+
+.tombol2:hover {
+  color: #464543;
+}
+
+.tombol2:active {
+  transform: translate(1px, 2px);
 }

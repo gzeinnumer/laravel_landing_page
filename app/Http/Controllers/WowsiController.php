@@ -13,8 +13,14 @@ class WowsiController extends Controller
         return view('wowsi.index');
     }
 
+<<<<<<< Updated upstream
     public function searchByNim(Request $r){
         // dd($r->all());
+=======
+    public function searchByNim(Request $r)
+    {
+        dd($r->all());
+>>>>>>> Stashed changes
         $data = User::where(["nim" => $r->nimkelompok])->first();
 
         if ($data != null) {

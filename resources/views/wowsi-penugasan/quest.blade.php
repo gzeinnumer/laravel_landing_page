@@ -13,23 +13,18 @@
   <div class="col text-center col-md-8">
     <div class="gulungan">
       <p class="mb-0"><img src="asset/gulungan.png" width="100%" alt="" /></p>
-    </div>
+    </div>  
     <div class="kotakBelakang bg-kertas p-1 text-center ms-auto me-auto pb-5" style="width: 83%">
+    @foreach($tugas as $d)
       <div class="quest mt-2 text-start ms-2">
-        <h2 class="fw-bold">Main Quest 1</h2>
-        <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt repellendus dolorem eaque maxime aperiam sit? Quaerat sunt sit nesciunt nulla quod eum quae, incidunt perferendis omnis provident maiores aperiam odit.</h4>
+        <h2 class="fw-bold">{{ $d->nama_penugasan }}</h2><br>
+        <h3>{{ $d->detail }}</h3><br>
+        <a href=" #"><h4>{{ $d->link_submit }}</h4><br></a>
+        <h4>{{ $d->deadline }}</h4>
+
         <img src="asset/page break.png" width="100%" alt="" />
       </div>
-      <div class="quest mt-2 text-start ms-2">
-        <h2 class="fw-bold">Main Quest 1</h2>
-        <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt repellendus dolorem eaque maxime aperiam sit? Quaerat sunt sit nesciunt nulla quod eum quae, incidunt perferendis omnis provident maiores aperiam odit.</h4>
-        <img src="asset/page break.png" width="100%" alt="" />
-      </div>
-      <div class="quest mt-2 text-start ms-2">
-        <h2 class="fw-bold">Main Quest 1</h2>
-        <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt repellendus dolorem eaque maxime aperiam sit? Quaerat sunt sit nesciunt nulla quod eum quae, incidunt perferendis omnis provident maiores aperiam odit.</h4>
-        <img src="asset/page break.png" width="100%" alt="" />
-      </div>
+    @endforeach
     </div>
     <div class="gulungan">
       <p class="mb-0"><img src="asset/gulungan.png" width="100%" alt="" /></p>

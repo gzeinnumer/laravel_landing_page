@@ -1,4 +1,4 @@
-<!-- GUlungan -->
+<!-- Gulungan -->
 <div class="gulungan text-center mt-5">
   <p class="mb-0"><img src="asset/gulungan.png" width="92%" alt="" /></p>
 </div>
@@ -11,8 +11,13 @@
     </div>
     <!-- yputube -->
     <div class="me-auto ms-auto mt-4 mb-4">
+<<<<<<< Updated upstream
       <iframe class="youtube" frameborder="0" scrolling="no" marginheight="" marginwidth="0" type="text/html" src="https://www.youtube.com/embed/DBXH9jJRaDk?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&origin=https://youtubeembedcode.com"
         ><div>
+=======
+      <iframe class="youtube" frameborder="0" scrolling="no" marginheight="" marginwidth="0" type="text/html" src="https://www.youtube.com/embed/IXCB4XUkkdY?controls=0">
+        <div>
+>>>>>>> Stashed changes
           <small><a href="https://youtubeembedcode.com/de/">youtubeembedcode de</a></small>
         </div>
         <div>
@@ -42,27 +47,30 @@
 
   <!-- Timeline -->
   <div id="timeline">
-    <div class="timeline txt-tittle3 text-uppercase fw-bold txt ms-auto me-auto hitam mb-5" id="timeline">t i m e l i n e</div>
-    <div class="row ms-auto me-auto">
+    <div class="timeline txt-tittle3 text-uppercase fw-bold txt ms-auto me-auto hitam mb-5" id="timeline">t i m e l i
+      n e</div>
+    <div class="row ms-auto me-auto " style="width: 100%;">
       <div class="col">
-        <div class="kotak me-auto ms-auto mt-5"></div>
-        pertama
+        <div class=" me-auto ms-auto mt-5"> <img src="asset/c1.svg" class="kotak" alt=""></div>
+        Chapter 1
       </div>
       <div class="col">
-        <div class="kotak me-auto ms-auto mt-5"></div>
-        kedua
+        <div class="kotak me-auto ms-auto mt-5"> <img src="asset/c2.svg" class="kotak" alt=""></div>
+        Chapter 2
       </div>
       <div class="col">
-        <div class="kotak me-auto ms-auto mt-5"></div>
-        ketiga
+        <div class="kotak me-auto ms-auto mt-5"> <img src="asset/c3.svg" class="kotak" alt=""></div>
+        Chapter 3
       </div>
     </div>
-    <div class="row ms-auto me-auto" style="width: 69%">
-      <div class="col">
-        <div class="kotak me-auto ms-auto mt-5">keempat</div>
+    <div class="row ms-auto me-auto " style="width: 85%;">
+      <div class=" col bg">
+        <div class="kotak me-auto ms-auto mt-5"><img src="asset/c4.svg" class="kotak" alt=""></div>
+        Chapter 4
       </div>
       <div class="col text-center">
-        <div class="kotak me-auto ms-auto mt-5">kelima</div>
+        <div class="kotak me-auto ms-auto mt-5"><img src="asset/chest.svg" class="kotak" alt=""></div>
+        Chapter 5
       </div>
     </div>
     <img src="asset/page break.png" width="100%" alt="" />
@@ -94,10 +102,18 @@
         @endif
       </p>
     </div>
+<<<<<<< Updated upstream
+=======
+    <p>
+      {{-- @if($datas!=null)
+      {{$datas->kelompoks->kelompok}}
+      @endif --}}
+    </p>
+>>>>>>> Stashed changes
   </div>
   <!-- end of kelompok -->
 </div>
-<!-- GUlungan -->
+<!-- Gulungan -->
 <div class="gulungan text-center">
   <p class="mb-0"><img src="asset/gulungan.png" width="92%" alt="" /></p>
 </div>
