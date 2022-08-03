@@ -15,7 +15,7 @@ class WowsiController extends Controller
 
     public function searchByNim(Request $r)
     {
-        dd($r->all());
+        // dd($r->all());
 
         $data = User::where(["nim" => $r->nimkelompok])->first();
 
