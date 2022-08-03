@@ -5,7 +5,7 @@
 
     <div class="col-md-6 mb-1">
       <label class="form-label"></label>
-      <input type="hidden" class="form-control borklat" required name="id" value="{{ Auth::user()->id}}"/>
+      <input type="hidden" name="id" value="{{ Auth::user()->id}}"/>
     </div>
 
     <div class="col-md-6 mb-1">

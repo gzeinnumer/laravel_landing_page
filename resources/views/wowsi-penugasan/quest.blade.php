@@ -19,7 +19,7 @@
       <div class="quest mt-2 text-start ms-2">
         <h2 class="fw-bold">{{ $d->nama_penugasan }}</h2><br>
         <h3>{{ $d->detail }}</h3><br>
-        <a href=" #"><h4>{{ $d->link_submit }}</h4><br></a>
+        <a href="http://{{ $d->link_submit }}"><h4>{{ $d->link_submit }}</h4><br></a>
         <h4>{{ $d->deadline }}</h4>
 
         <img src="asset/page break.png" width="100%" alt="" />

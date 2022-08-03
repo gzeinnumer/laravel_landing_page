@@ -6,9 +6,17 @@ use App\Models\PenilaianModel;
 use App\Models\User;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class PenilaianController extends Controller
 {
+
+    public function __construct()
+    {
+        if (Auth::user()->id_type_user == 2)
+        return 'Access Denied';
+    }
+
     public function index()
     {
 //         $crashedCarIds = CrashedCar::pluck('car_id')->all();

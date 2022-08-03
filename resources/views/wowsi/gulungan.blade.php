@@ -92,11 +92,6 @@
       </div>
      
       <div class="col-sm-3 mt-3"><img src="asset/guardiankanan.png" alt="" width="100%" /></div>
-      <p>
-        @if($datas!=null)
-        {{$datas->kelompoks->kelompok}}
-        @endif
-      </p>
     </div>
   </div>
   <!-- end of kelompok -->

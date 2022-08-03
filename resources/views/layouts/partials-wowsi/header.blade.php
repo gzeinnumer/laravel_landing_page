@@ -27,7 +27,7 @@
               <li><a class="dropdown-item fw-bold" href="{{ route('wowsi-editakun.index') }}">Edit Akun</a></li>
               {{-- <li><a class="dropdown-item fw-bold" href="gantiPsw.html">Ganti Password</a></li> --}}
               <li><a class="dropdown-item border-bottom border-warning fw-bold" href="{{ route('wowsi-penugasan.index') }}">Penugasan</a></li>
-              <li><a class="dropdown-item text-danger fw-bold" href="">Sign Out</a></li>
+              <li><a class="dropdown-item text-danger fw-bold" href="{{ route('logout.perform') }}">Sign Out</a></li>
             </ul>
           </li>
         </ul>
