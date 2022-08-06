@@ -18,8 +18,8 @@
         </div>
         <div>
           <small><a href="https://betting-utan-licens.nu/">betting-utan-licens.nu</a></small>
-        </div></iframe
-      >
+        </div>
+      </iframe>
     </div>
     <!-- end of youtube -->
 
@@ -77,21 +77,27 @@
   <div class="kelompok" id="kelompok">
     <div class="row pb-lg-5 p-5">
       <div class="col-sm-3 mt-3"><img src="asset/guardian.png" width="100%" alt="" /></div>
-        <div class="col-sm-6 mt-auto mb-auto">
-          <form action="{{ route('wowsi.search') }}" method="get">
+      <div class="col-sm-6 mt-auto mb-auto">
+        <form action="{{ route('wowsi.search') }}" method="get">
           <label for="cari" class="fw-bold fs-2 mb-3">You will need a party to pass this journey. Find your party here!</label>
           <div class="input-group search">
             <input id="cari" type="text" class="form-control" placeholder="Masukkan NIM kamu" name="nimkelompok" />
             <div class="input-group-append" id="carikelompok">
-              <button class="rounded-end btn-dark btn" style="border-radius: 0px" type="submit" name="submit2">
+              <button class="rounded-end btn-dark btn" style="border-radius: 0px" type="submit">
                 <i class="fa-solid fa-magnifying-glass"></i>
               </button>
             </div>
           </div>
         </form>
       </div>
-     
+
       <div class="col-sm-3 mt-3"><img src="asset/guardiankanan.png" alt="" width="100%" /></div>
+      @if($datas != null)
+      <div class="col-sm-6 mt-auto mb-auto">
+        <label for="cari" class="fw-bold fs-2 mb-3">{{$datas->kelompoks->kelompok}}</label>
+        <label for="cari" class="fw-bold fs-2 mb-3">{{$datas->kelompoks->link_grup}}</label>
+      </div>
+      @endif
     </div>
   </div>
   <!-- end of kelompok -->

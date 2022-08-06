@@ -10,7 +10,10 @@ class WowsiController extends Controller
 {
     public function index()
     {
-        return view('wowsi.index');
+        $sent = [
+            "datas" => null
+        ];
+        return view('wowsi.index', $sent);
     }
 
     public function searchByNim(Request $r)
@@ -26,7 +29,5 @@ class WowsiController extends Controller
             "datas" => $data
         ];
         return view('wowsi.index', $sent);
-
-
     }
 }

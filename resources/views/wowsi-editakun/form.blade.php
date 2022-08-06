@@ -1,26 +1,23 @@
 <!-- FORM -->
 <form action="{{ route('wowsi-editakun.perform') }}" method="POST">
-@csrf
+  @csrf
   <div class="row m-auto mt-0 p-5 shadow bg-kertas h-100" style="background-color: #f0e7d7; width: 70%; z-index: 2">
 
-    <div class="col-md-6 mb-1">
-      <label class="form-label"></label>
-      <input type="hidden" name="id" value="{{ Auth::user()->id}}"/>
-    </div>
+    <input type="hidden" name="id" value="{{ Auth::user()->id}}" readonly />
 
     <div class="col-md-6 mb-1">
       <label class="form-label">Nama lengkap</label>
-      <input type="text" class="form-control borklat" required name="nama_lengkap" value="{{ Auth::user()->nama_lengkap}}"/>
+      <input type="text" class="form-control borklat" required name="nama_lengkap" value="{{ Auth::user()->nama_lengkap}}" />
     </div>
 
     <div class="col-md-6 mb-1">
       <label class="form-label">Tempat Lahir </label>
-      <input type="text" name="tempat_lahir" class="form-control borklat" required value="{{ Auth::user()->tempat_lahir}}"/>
+      <input type="text" name="tempat_lahir" class="form-control borklat" required value="{{ Auth::user()->tempat_lahir}}" />
     </div>
 
     <div class="col-md-6 mb-1">
       <label class="form-label">NIM </label>
-      <input type="text" class="form-control borklat" required name="nim" value="{{ Auth::user()->nim}}"/>
+      <input type="text" class="form-control borklat" required name="nim" value="{{ Auth::user()->nim}}" />
     </div>
 
     <div class="col-md-6 mb-1">
@@ -35,12 +32,12 @@
 
     <div class="col-md-6 mb-1">
       <label class="form-label">Alamat asal</label>
-      <input type="text" class="form-control borklat" required name="alamat_asal" value="{{ Auth::user()->alamat_asal}}"/>
+      <input type="text" class="form-control borklat" required name="alamat_asal" value="{{ Auth::user()->alamat_asal}}" />
     </div>
 
     <div class="col-md-6 mb-1">
       <label class="form-label">No Handphone </label>
-      <input type="text" class="form-control borklat" required name="no_hp" value="{{ Auth::user()->no_hp}}"/>
+      <input type="text" class="form-control borklat" required name="no_hp" value="{{ Auth::user()->no_hp}}" />
     </div>
 
     <div class="col-md-6 mb-1">
@@ -50,7 +47,7 @@
 
     <div class="col-md-6 mb-1">
       <label class="form-label">Alamat di Malang</label>
-      <input type="text" class="form-control borklat" required name="alamat_malang" value="{{ Auth::user()->alamat_malang}}"/>
+      <input type="text" class="form-control borklat" required name="alamat_malang" value="{{ Auth::user()->alamat_malang}}" />
     </div>
 
     <div class="col-md-6 mb-1">
