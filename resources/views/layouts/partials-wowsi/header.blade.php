@@ -20,7 +20,7 @@
           <li class="nav-item">
             <a class="nav-link active fw-bolder" aria-current="page" href="#kelompok">Kelompok</a>
           </li>
-
+          @if(Auth::user()!=null)
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle rounded-pill fw-bolder text-center ps-3 pe-3 pt-0 pb-1 mt-2 ms-2" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="background-color: #ed8d35"> Akun </a>
             <ul class="dropdown-menu text-center border-warning" aria-labelledby="navbarDropdownMenuLink">
@@ -30,6 +30,7 @@
               <li><a class="dropdown-item text-danger fw-bold" href="{{ route('logout.perform') }}">Sign Out</a></li>
             </ul>
           </li>
+          @endif
         </ul>
       </div>
     </div>
