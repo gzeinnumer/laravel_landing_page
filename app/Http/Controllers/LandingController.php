@@ -10,6 +10,8 @@ class LandingController extends Controller
 {
     public function index()
     {
+        
+
         $tugas= TugasModel::all();
         $sent=[
             'tugas'=> $tugas

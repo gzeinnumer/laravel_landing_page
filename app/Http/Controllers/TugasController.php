@@ -3,19 +3,22 @@
 namespace App\Http\Controllers;
 
 use App\Models\TugasModel;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class TugasController extends Controller
 {
-    public function __construct()
-    {
-        if (Auth::user()->id_type_user == 2)
-        return 'Access Denied';
-    }
-
+  
     public function index()
     {
+
+        // dd(Auth::user());
+
+        $user = User::find(Auth::user()->id);
+        if ($user->id_type_user==2)
+        return 'Access Denied';
+        
         $data = $this->getData();
         $sent = [
             "data" => $data

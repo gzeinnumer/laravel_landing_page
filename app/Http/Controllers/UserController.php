@@ -9,14 +9,16 @@ use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
-    public function __construct()
-    {
-        if (Auth::user()->id_type_user == 2)
-        return 'Access Denied';
-    }
+    
 
     public function index()
     {
+        // dd(Auth::user());
+
+        $user = User::find(Auth::user()->id);
+        if ($user->id_type_user==2)
+        return 'Access Denied';
+        
         $data = $this->getData();
         $kelompok = KelompokModel::all();
         $sent = [

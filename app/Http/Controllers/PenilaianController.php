@@ -13,8 +13,9 @@ class PenilaianController extends Controller
 
     public function __construct()
     {
-        if (Auth::user()->id_type_user == 2)
-        return 'Access Denied';
+        dd(Auth::user());
+        // if (Auth::user()->id_type_user == 2)
+        // return 'Access Denied';
     }
 
     public function index()
