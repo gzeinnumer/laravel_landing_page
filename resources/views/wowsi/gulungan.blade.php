@@ -12,7 +12,7 @@
     <!-- yputube -->
     <div class="me-auto ms-auto mt-4 mb-4">
 
-      <iframe class="youtube" frameborder="0" scrolling="no" marginheight="" marginwidth="0" type="text/html" src="https://www.youtube.com/embed/DBXH9jJRaDk?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&origin=https://youtubeembedcode.com">
+      <iframe class="youtube" frameborder="0" scrolling="no" marginheight="" marginwidth="0" type="text/html" src="https://www.youtube.com/embed/IXCB4XUkkdY?controls=0" title="YouTube video player">
         <div>
           <small><a href="https://youtubeembedcode.com/de/">youtubeembedcode de</a></small>
         </div>

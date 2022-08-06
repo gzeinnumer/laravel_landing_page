@@ -2,16 +2,15 @@
 <html lang="en">
 
   {{-- Head Tag --}}
-  @include('layouts.partials-wowsi.head')
+  @include('layouts.partials-wowsi-2.head')
 
   <!-- Navbar -->
-  @include('layouts.partials-wowsi.header')
+  @include('layouts.partials-wowsi-2.header')
   <!-- End Of Navbar -->
 
   <body>
 
-    
-
+  
     @yield('content-wowsi')
 
     @yield('extra_modal2')

@@ -11,6 +11,7 @@
 
         @include('layouts.partials.messages')
 
+        {{-- Username --}}
         <div class="form-group form-floating mb-3">
             <input type="text" class="form-control" name="username" value="{{ old('username') }}" placeholder="Username" required="required" autofocus>
             <label for="floatingName">Email or Username</label>
@@ -19,6 +20,7 @@
             @endif
         </div>
         
+        {{-- Password --}}
         <div class="form-group form-floating mb-3">
             <input type="password" class="form-control" name="password" value="{{ old('password') }}" placeholder="Password" required="required">
             <label for="floatingPassword">Password</label>
@@ -27,9 +29,18 @@
             @endif
         </div>
 
+        {{-- Action Button --}}
         <button class="w-100 btn btn-lg btn-primary" type="submit">Login</button>
         
         @include('auth.partials.copy')
     </form>
+    
 
-@endsection
+@stop
+
+
+@section('extra_modal_login')
+
+@include('auth.modal-login')
+
+@stop

@@ -1,7 +1,10 @@
-@extends('layouts.master-wowsi')
+@extends('layouts.master-wowsi-2')
 
 
 @section('content-wowsi')
+
+
+
 
 @include('wowsi-editakun.logo')
 @include('wowsi-editakun.form')
