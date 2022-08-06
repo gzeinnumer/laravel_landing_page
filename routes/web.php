@@ -16,10 +16,11 @@ use App\Http\Controllers\PenugasanController;
 use App\Http\Controllers\EditAkunController;
 
 
+Route::get('/', [WowsiController::class, 'index'])->name('wowsi.index');
 
 
 Route::group(['middleware' => ['guest']], function () {
-    Route::get('/', [WowsiController::class, 'index'])->name('wowsi.index');
+    
 
     Route::get('/login', [LoginController::class, 'show'])->name('login.show');
     Route::post('/login', [LoginController::class, 'login'])->name('login.perform');
@@ -28,6 +29,7 @@ Route::group(['middleware' => ['guest']], function () {
 Route::group(['middleware' => ['auth']], function () {
 
     Route::get('/soon', [HomeController::class, 'index'])->name('soon');
+    
 
     // WOWSI
     Route::get('/wowsisearch', [WowsiController::class, 'searchByNim'])->name('wowsi.search');
