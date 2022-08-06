@@ -3,6 +3,7 @@ body {
   
   background-size: 100% auto;
   background-repeat: repeat-y;
+  font-family: 'Inter', sans-serif;
 }
 
 .borklat {
@@ -122,6 +123,7 @@ body {
   display: inline-block;
   padding: 10px 100px;
   background-color: #ED8D35;
+  border-radius: 18px;
 }
 
 .tombol:hover {

@@ -38,8 +38,9 @@
 <body class="hold-transition login-page bg-rafi">
 
 
-    {{-- End of Modal --}}
+
     <div class="login-box">
+        
         <!-- /.login-logo -->
         <div class="card card-outline card-primary">
             <div class="card-body">
@@ -47,6 +48,8 @@
 
                 <form method="post" action="{{ route('login.perform') }}">
                     <input type="hidden" name="_token" value="{{ csrf_token() }}" />
+
+                    @include('layouts.partials.messages')
 
                     <div class="input-group mb-3">
                         <input type="text" class="form-control" placeholder="username" name="username" value="{{ old('username') }}">

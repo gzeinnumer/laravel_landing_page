@@ -9,6 +9,7 @@ use App\Http\Controllers\TugasController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\LoginIndexController;
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\WowsiController;
@@ -21,7 +22,7 @@ Route::get('/', [WowsiController::class, 'index'])->name('wowsi.index');
 
 Route::group(['middleware' => ['guest']], function () {
     
-
+    Route::get('/loginmasuk', [LoginIndexController::class, 'index'])->name('login.index');
     Route::get('/login', [LoginController::class, 'show'])->name('login.show');
     Route::post('/login', [LoginController::class, 'login'])->name('login.perform');
 });

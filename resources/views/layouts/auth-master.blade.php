@@ -16,6 +16,11 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" />
 
+    {{-- CDN FONTS --}}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
     <!-- Custom styles for this template -->
     <link rel="stylesheet" href="  {{asset('css/style.css')}}
     " />
@@ -53,7 +58,9 @@
 
       @yield('content')
 
-      @yield('extra_modal_login')
+      @yield('content_login')
+      
+      {{-- @yield('extra_modal_login') --}}
         
     {{-- </main> --}}
     
