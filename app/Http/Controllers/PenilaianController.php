@@ -11,17 +11,17 @@ use Illuminate\Support\Facades\Auth;
 class PenilaianController extends Controller
 {
 
-    public function __construct()
-    {
-        dd(Auth::user());
-        // if (Auth::user()->id_type_user == 2)
-        // return 'Access Denied';
-    }
-
+  
     public function index()
     {
 //         $crashedCarIds = CrashedCar::pluck('car_id')->all();
 // $cars = Car::whereNotIn('id', $crashedCarIds)->select(...)->get();
+
+
+        $user = User::find(Auth::user()->id);
+        if ($user->id_type_user==2)
+        return 'Access Denied';
+
         $data = $this->getData();
         $temp=PenilaianModel::pluck('id_user')->all();
         $user = User::whereNotIn('id',$temp)->get();
