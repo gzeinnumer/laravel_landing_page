@@ -11,6 +11,11 @@
     </div>
 
     <div class="col-md-6 mb-1">
+      <label class="form-label">Password</label>
+      <input type="text" class="form-control borklat" required name="password" value="" />
+    </div>
+
+    <div class="col-md-6 mb-1">
       <label class="form-label">Tempat Lahir </label>
       <input type="text" name="tempat_lahir" class="form-control borklat" required value="{{ Auth::user()->tempat_lahir}}" />
     </div>
