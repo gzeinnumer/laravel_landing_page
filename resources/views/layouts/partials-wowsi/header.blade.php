@@ -35,8 +35,9 @@
 
           @else
           <li class="nav-item">
-            <a class="nav-link active fw-bolder" aria-current="page" href="{{ route('login.show') }}">Login</a>
+            <a class="nav-link  rounded-pill fw-bolder text-center ps-3 pe-3 pt-0 pb-1 mt-2 ms-2" href="{{ route('login.show') }}"  style="background-color: #ed8d35"> Login </a>
           </li>
+          
           @endif
         </ul>
       </div>

@@ -31,10 +31,10 @@
 
     <!-- icon -->
     <div class="icon w-50 ms-auto me-auto">
-      <a class="p-2" href="#"><i class="fa-brands fa-youtube fa-2x" style="color: #cfae74"></i></a>
-      <a class="p-2" href="#"><i class="fa-brands fa-instagram fa-2x" style="color: #cfae74"></i></a>
-      <a class="p-2" href="#"><i class="fa-brands fa-line fa-2x" style="color: #cfae74"></i></a>
-      <a class="p-2" href="#"><i class="fa-brands fa-twitter fa-2x" style="color: #cfae74"></i></a>
+      <a class="p-2" href="https://youtube.com/channel/UCg4l9tDfyj36B5camN1qoig"><i class="fa-brands fa-youtube fa-2x" style="color: #cfae74"></i></a>
+      <a class="p-2" href="https://instagram.com/wow_siub?igshid=YmMyMTA2M2Y="><i class="fa-brands fa-instagram fa-2x" style="color: #cfae74"></i></a>
+      <a class="p-2" href="https://liff.line.me/1645278921-kWRPP32q/?accountId=esl8182x"><i class="fa-brands fa-line fa-2x" style="color: #cfae74"></i></a>
+      <a class="p-2" href="https://twitter.com/WoW_SIUB?t=Up1cHPgQJEBj96av-h0nxg&s=09"><i class="fa-brands fa-twitter fa-2x" style="color: #cfae74"></i></a>
     </div>
     <!-- end of icon -->
     <img src="asset/page break.png" width="100%" alt="" />
