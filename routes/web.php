@@ -103,6 +103,11 @@ Route::group(['middleware' => ['auth']], function () {
             Route::get('/detailedit/{id}', [UserController::class, 'detailEdit'])->name('user.detailedit');
 
             Route::post('/edit/{id}', [UserController::class, 'edit'])->name('user.edit');
+
+
+            // SEARCHUSER
+            Route::get('/searchuser', [UserController::class, 'searchUser'])->name('user.search');
+
         });
 
         // Penilaian

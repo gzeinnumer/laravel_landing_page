@@ -70,7 +70,7 @@
                                         <td>{{$d->kelompok}}</td>
                                         <td>{{$d->link_grup}}</td>
                                         <td>
-                                            <a href="{{ route('kelompok.delete' , [ 'id' => $d->id ]) }}" class="btn  btn-danger ">Danger</a>
+                                            <a href="{{ route('kelompok.delete' , [ 'id' => $d->id ]) }}" class="btn  btn-danger ">Delete</a>
                                             <a href="{{ route('kelompok.detailinfo' , [ 'id' => $d->id ]) }}" class="btn  btn-primary ">Info</a>
                                             <a href="{{ route('kelompok.detailedit' , [ 'id' => $d->id ]) }}" class="btn  btn-warning ">Edit</a>
                                         </td>

@@ -115,4 +115,12 @@ class UserController extends Controller
 
         return redirect()->route('user.index');
     }
+
+    public function searchUser(Request $r)
+    {
+        // dd($r->all());
+        $data = User::select()->where('nama_lengkap','like',"%$r->user_value%")->orwhere('username','like',"%$r->user_value%")->get();
+        return json_encode($data);
+
+    }
 }
