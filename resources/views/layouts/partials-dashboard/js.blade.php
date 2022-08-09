@@ -1,5 +1,5 @@
 <!-- jQuery -->
-<script src="{{asset('dashboard/plugins/jquery/jquery.min.js')}}"></script>
+<!-- <script src="{{asset('dashboard/plugins/jquery/jquery.min.js')}}"></script> -->
 <!-- jQuery UI 1.11.4 -->
 <script src="{{asset('dashboard/plugins/jquery-ui/jquery-ui.min.js')}}"></script>
 <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
@@ -29,6 +29,5 @@
 <!-- AdminLTE App -->
 <script src="{{asset('dashboard/dist/js/adminlte.js')}}"></script>
 <!-- AdminLTE for demo purposes -->
-<script src="{{asset('dashboard/dist/js/demo.js')}}"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="{{asset('dashboard/dist/js/pages/dashboard.js')}}"></script>

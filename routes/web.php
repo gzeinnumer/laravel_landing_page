@@ -15,13 +15,13 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\WowsiController;
 use App\Http\Controllers\PenugasanController;
 use App\Http\Controllers\EditAkunController;
-
+use Illuminate\Support\Facades\App;
 
 Route::get('/', [WowsiController::class, 'index'])->name('wowsi.index');
 
 
 Route::group(['middleware' => ['guest']], function () {
-    
+
     Route::get('/loginmasuk', [LoginIndexController::class, 'index'])->name('login.index');
     Route::get('/login', [LoginController::class, 'show'])->name('login.show');
     Route::post('/login', [LoginController::class, 'login'])->name('login.perform');
@@ -30,7 +30,7 @@ Route::group(['middleware' => ['guest']], function () {
 Route::group(['middleware' => ['auth']], function () {
 
     Route::get('/soon', [HomeController::class, 'index'])->name('soon');
-    
+
 
     // WOWSI
     Route::get('/wowsisearch', [WowsiController::class, 'searchByNim'])->name('wowsi.search');
@@ -107,7 +107,6 @@ Route::group(['middleware' => ['auth']], function () {
 
             // SEARCHUSER
             Route::get('/searchuser', [UserController::class, 'searchUser'])->name('user.search');
-
         });
 
         // Penilaian
@@ -126,6 +125,14 @@ Route::group(['middleware' => ['auth']], function () {
             Route::get('/detailedit/{id}', [PenilaianController::class, 'detailEdit'])->name('penilaian.detailedit');
 
             Route::post('/edit/{id}', [PenilaianController::class, 'edit'])->name('penilaian.edit');
+
+            Route::get('/data', [PenilaianController::class, 'dataTables'])->name('penilaian.data');
+
+            //debug only
+            if (App::hasDebugModeEnabled()) {
+                //buat nyontek data ke datatable
+                Route::get('/json', [PenilaianController::class, 'getDataV2']);
+            }
         });
     });
 });

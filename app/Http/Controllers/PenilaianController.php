@@ -2,29 +2,30 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\PenilaianModel;      
+use App\Models\PenilaianModel;
 use App\Models\User;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Yajra\DataTables\Facades\DataTables;
 
 class PenilaianController extends Controller
 {
 
-  
+
     public function index()
     {
-//         $crashedCarIds = CrashedCar::pluck('car_id')->all();
-// $cars = Car::whereNotIn('id', $crashedCarIds)->select(...)->get();
+        //         $crashedCarIds = CrashedCar::pluck('car_id')->all();
+        // $cars = Car::whereNotIn('id', $crashedCarIds)->select(...)->get();
 
 
         $user = User::find(Auth::user()->id);
-        if ($user->id_type_user==2)
-        return 'Access Denied';
+        if ($user->id_type_user == 2)
+            return 'Access Denied';
 
         $data = $this->getData();
-        $temp=PenilaianModel::pluck('id_user')->all();
-        $user = User::whereNotIn('id',$temp)->get();
+        $temp = PenilaianModel::pluck('id_user')->all();
+        $user = User::whereNotIn('id', $temp)->get();
         $sent = [
             "data" => $data,
             "user" => $user
@@ -38,8 +39,8 @@ class PenilaianController extends Controller
         $data = PenilaianModel::all();
 
         //looping buat ngambil data dari tabel lain satu satu (lebih praktis dari belongs to dll)
-        for ($i=0; $i < count($data); $i++) { 
-            $data[$i]->users=User::find($data[$i]->id_user);
+        for ($i = 0; $i < count($data); $i++) {
+            $data[$i]->users = User::find($data[$i]->id_user);
         }
         return $data;
     }
@@ -53,7 +54,7 @@ class PenilaianController extends Controller
         $data->nilai2 = $r->nilai2;
         $data->nilai3 = $r->nilai3;
         $data->nilai4 = $r->nilai4;
-        
+
         $data->save();
 
         return redirect()->route('penilaian.index');
@@ -72,7 +73,7 @@ class PenilaianController extends Controller
     {
         $data = PenilaianModel::find($id);
         // ambil 1 baris data
-        $data->users=User::find($data->id_user);
+        $data->users = User::find($data->id_user);
         $user = User::all();
         $sent = [
             "data" => $data,
@@ -84,7 +85,7 @@ class PenilaianController extends Controller
     public function detailEdit($id)
     {
         $data = PenilaianModel::find($id);
-        $data->users=User::find($data->id_user);
+        $data->users = User::find($data->id_user);
         $user = User::all();
         $sent = [
             "data" => $data,
@@ -101,9 +102,44 @@ class PenilaianController extends Controller
         $data->nilai2 = $r->nilai2;
         $data->nilai3 = $r->nilai3;
         $data->nilai4 = $r->nilai4;
-        
+
         $data->save();
 
         return redirect()->route('penilaian.index');
+    }
+
+    //dataTables
+    public function dataTables(Request $request)
+    {
+        if ($request->ajax()) {
+            $data = $this->getDataV2($request);
+
+            return DataTables::of($data)
+                ->addIndexColumn()
+                ->addColumn('action', function ($row) {
+                    $actionBtn = "";
+                    $actionBtn .=  '<td>
+                                            <a href="/dashboardv2/penilaian/detailinfo/' . $row->id . '" class="btn  btn-primary ">Info</a>
+                                            <a href="/dashboardv2/penilaian/detailedit/' . $row->id . '" class="btn  btn-warning ">Edit</a>
+                                        </td>';
+                    return $actionBtn;
+                })
+                ->rawColumns(['action'])
+                ->make(true);
+        }
+    }
+
+    public function getDataV2(Request $request)
+    {
+        $data = PenilaianModel::select();
+
+        //kosong
+
+        $data = $data->get();
+
+        for ($i = 0; $i < count($data); $i++) {
+            $data[$i]->users = User::find($data[$i]->id_user);
+        }
+        return $data;
     }
 }
