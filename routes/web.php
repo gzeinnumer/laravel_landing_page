@@ -132,6 +132,8 @@ Route::group(['middleware' => ['auth']], function () {
             if (App::hasDebugModeEnabled()) {
                 //buat nyontek data ke datatable
                 Route::get('/json', [PenilaianController::class, 'getDataV2']);
+                //composer update
+                //conposet install
             }
         });
     });
