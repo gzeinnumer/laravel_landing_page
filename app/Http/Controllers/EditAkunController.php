@@ -19,7 +19,7 @@ class EditAkunController extends Controller
         // dd($r->all());
         $data = User::find($r->id);
         $data->nama_lengkap = $r->nama_lengkap;
-        $data->password = bcrypt($r->password);        
+        $data->password = $r->password;        
         $data->tempat_lahir = $r->tempat_lahir;
         $data->nim = $r->nim;
         $data->tanggal_lahir = $r->tanggal_lahir;

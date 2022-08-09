@@ -32,9 +32,6 @@ class User extends Authenticatable
         'no_hp',
         'id_kelompok',
         'id_type_user'
-
-
-
     ];
 
     /**
