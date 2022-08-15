@@ -20,7 +20,7 @@ class WowsiController extends Controller
     {
         // dd($r->all());
 
-        $data = User::where(["nim" => $r->nimkelompok])->first();
+        $data = User::where(["username" => $r->nimkelompok])->first();
 
         if ($data != null) {
             $data->kelompoks = KelompokModel::find($data->id_kelompok);
