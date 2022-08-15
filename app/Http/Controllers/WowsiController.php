@@ -29,5 +29,6 @@ class WowsiController extends Controller
             "datas" => $data
         ];
         return view('wowsi.index', $sent);
+        // return redirect('/wowsisearch')->with($sent);
     }
 }

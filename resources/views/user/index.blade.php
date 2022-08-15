@@ -52,11 +52,11 @@
                             <table class="table table-hover text-wrap">
                                 <thead>
                                     <tr>
-
+                                        <th>NO</th>
                                         <th>Name</th>
                                         <th>Email</th>
                                         <th>Nama Lengkap</th>
-                                        <th>Nim</th>
+                                        <th>Nim(sementara make username)</th>
                                         <th>Kelompok</th>
                                         <th>Action</th>
                                     </tr>
@@ -65,17 +65,16 @@
                                 <tbody>
                                     @foreach($data as $d)
                                     <tr>
-                                        
-                                        <td>{{$d->name}}</td>
-                                
+                                        <td>{{ $loop->iteration }}</td>  
+                                        <td>{{$d->name}}</td>                               
                                         <td>{{$d->email}}</td>
                                         <td>{{$d->nama_lengkap}}</td>
-                                        <td>{{$d->nim}}</td>
+                                        <td>{{$d->username}}</td>
                                         <td>{{$d->id_kelompok}}</td>
                                         <td>
-                                            <a href="{{ route('user.delete' , [ 'id' => $d->id ]) }}" class="btn btn-block btn-danger btn-xs">Delete</a>
-                                            <a href="{{ route('user.detailinfo' , [ 'id' => $d->id ]) }}" class="btn btn-block btn-primary btn-xs">Info</a>
-                                            <a href="{{ route('user.detailedit' , [ 'id' => $d->id ]) }}" class="btn btn-block btn-warning btn-xs">Edit</a>
+                                            <a href="{{ route('user.delete' , [ 'id' => $d->id ]) }}" class="btn btn-danger btn-xs">Delete</a>
+                                            <a href="{{ route('user.detailinfo' , [ 'id' => $d->id ]) }}" class="btn  btn-primary btn-xs">Info</a>
+                                            <a href="{{ route('user.detailedit' , [ 'id' => $d->id ]) }}" class="btn btn-warning btn-xs">Edit</a>
                                         </td>
                                     </tr>
                                     @endforeach

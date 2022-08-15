@@ -57,7 +57,8 @@
                             <table class="table table-hover text-nowrap">
                                 <thead>
                                     <tr>
-                                        <th>ID</th>
+                                        <th>NO</th>
+                                        {{-- <th>ID</th> --}}
                                         <th>Kelompok</th>
                                         <th>Link Grup</th>
                                         <th>Action</th>
@@ -66,13 +67,14 @@
                                 <tbody>
                                     @foreach($data as $d)
                                     <tr>
-                                        <td>{{$d->id}}</td>
+                                        <td>{{ $loop->iteration }}</td>
+                                        {{-- <td>{{$d->id}}</td> --}}
                                         <td>{{$d->kelompok}}</td>
                                         <td>{{$d->link_grup}}</td>
                                         <td>
-                                            <a href="{{ route('kelompok.delete' , [ 'id' => $d->id ]) }}" class="btn  btn-danger ">Delete</a>
-                                            <a href="{{ route('kelompok.detailinfo' , [ 'id' => $d->id ]) }}" class="btn  btn-primary ">Info</a>
-                                            <a href="{{ route('kelompok.detailedit' , [ 'id' => $d->id ]) }}" class="btn  btn-warning ">Edit</a>
+                                            <a href="{{ route('kelompok.delete' , [ 'id' => $d->id ]) }}" class="btn  btn-danger btn-xs">Delete</a>
+                                            <a href="{{ route('kelompok.detailinfo' , [ 'id' => $d->id ]) }}" class="btn  btn-primary btn-xs">Info</a>
+                                            <a href="{{ route('kelompok.detailedit' , [ 'id' => $d->id ]) }}" class="btn  btn-warning btn-xs">Edit</a>
                                         </td>
                                     </tr>
                                     @endforeach

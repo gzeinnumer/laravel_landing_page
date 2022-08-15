@@ -1,3 +1,5 @@
+  
+  
 <!-- Gulungan -->
 <div class="gulungan text-center mt-5">
   <p class="mb-0"><img src="asset/gulungan.png" width="92%" alt="" /></p>
@@ -25,8 +27,7 @@
 
     <p class="txt-tittle2 text-uppercase fw-bold hitam">wow si</p>
     <p class="ms-5 me-5">
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint inventore alias doloribus veniam fuga, ea impedit quae atque sequi quisquam id facilis expedita molestiae, modi nobis suscipit voluptatibus sed? Perferendis dolores autem voluptatem deserunt, nostrum odio tempore alias iusto officia rerum consequatur libero quaerat impedit. Autem, quos. Maiores necessitatibus nulla architecto obcaecati quae, aliquam atque, dicta quasi totam deleniti delectus excepturi ipsam eaque, ipsa
-      voluptates et illum! Porro, dolorum earum.
+      Weeks of Welcoming Sistem Informasi (WOW SI) merupakan salah satu program kerja dari Eksekutif Mahasiswa Sistem Informasi (EMSI) yang bertujuan untuk mengenalkan kehidupan perkuliahan di program studi Sistem Informasi dan budaya yang telah mengakar dalam Keluarga Besar Mahasiswa Sistem Informasi (KBMSI). WOW SI telah menjadi tradisi yang dilaksanakan setiap tahunnya oleh program studi Sistem Informasi dalam rangka menyambut keluarga baru Sistem Informasi yang nantinya akan menjadi bagian dari Keluarga Besar Mahasiswa Sistem Informasi. WOW SI 2022 akan terdiri dari beberapa chapter yang memiliki berbagai nilai unik dan menarik yang terdapat pada setiap chapternya.
     </p>
 
     <!-- icon -->
@@ -78,26 +79,40 @@
     <div class="row pb-lg-5 p-5">
       <div class="col-sm-3 mt-3"><img src="asset/guardian.png" width="100%" alt="" /></div>
       <div class="col-sm-6 mt-auto mb-auto">
+        
         <form action="{{ route('wowsi.search') }}" method="get">
           <label for="cari" class="fw-bold fs-2 mb-3">You will need a party to pass this journey. Find your party here!</label>
           <div class="input-group search">
             <input id="cari" type="text" class="form-control" placeholder="Masukkan NIM kamu" name="nimkelompok" />
             <div class="input-group-append" id="carikelompok">
-              <button class="rounded-end btn-dark btn" style="border-radius: 0px" type="submit">
+
+              <button class="rounded-end btn-dark btn" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap" style="border-radius: 0px" type="submit" >
                 <i class="fa-solid fa-magnifying-glass"></i>
               </button>
+
             </div>
           </div>
         </form>
       </div>
 
-      <div class="col-sm-3 mt-3"><img src="asset/guardiankanan.png" alt="" width="100%" /></div>
-      @if($datas != null)
-      <div class="col-sm-6 mt-auto mb-auto">
-        <label for="cari" class="fw-bold fs-2 mb-3">{{$datas->kelompoks->kelompok}}</label>
-        <label for="cari" class="fw-bold fs-2 mb-3">{{$datas->kelompoks->link_grup}}</label>
-      </div>
-      @endif
+      <div class="col-sm-3 mt-3 mb-3"><img src="asset/guardiankanan.png" alt="" width="100%" /></div>
+
+     
+          <div class="card" id="cari">  
+            <div class="card-body">
+              @if($datas != null)
+                  <div class="d-flex justify-content-center">
+                    <div class="row">
+                      <label for="cari" class="col-12 fw-bold fs-2 ">{{$datas->kelompoks->kelompok}}</label>                  
+                      <label for="cari" class="col-12 fw-bold fs-2 ">{{$datas->kelompoks->link_grup}}</label>
+                    </div>
+                  </div>
+              @endif  
+            </div>
+          </div>
+      
+      
+    
     </div>
   </div>
   <!-- end of kelompok -->

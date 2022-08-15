@@ -17,14 +17,18 @@ use App\Http\Controllers\PenugasanController;
 use App\Http\Controllers\EditAkunController;
 use Illuminate\Support\Facades\App;
 
-Route::get('/', [WowsiController::class, 'index'])->name('wowsi.index');
 
+// WOWSI GUEST
+
+Route::get('/', [WowsiController::class, 'index'])->name('wowsi.index');
+Route::get('/wowsisearch', [WowsiController::class, 'searchByNim'])->name('wowsi.search');
 
 Route::group(['middleware' => ['guest']], function () {
 
-    Route::get('/loginmasuk', [LoginIndexController::class, 'index'])->name('login.index');
+    // Route::get('/loginmasuk', [LoginIndexController::class, 'index'])->name('login.index');
     Route::get('/login', [LoginController::class, 'show'])->name('login.show');
     Route::post('/login', [LoginController::class, 'login'])->name('login.perform');
+    
 });
 
 Route::group(['middleware' => ['auth']], function () {
@@ -33,7 +37,7 @@ Route::group(['middleware' => ['auth']], function () {
 
 
     // WOWSI
-    Route::get('/wowsisearch', [WowsiController::class, 'searchByNim'])->name('wowsi.search');
+    
     // Penugasan WOWSI
     Route::get('/penugasan', [PenugasanController::class, 'index'])->name('wowsi-penugasan.index');
     // Edit AKun WOWSI

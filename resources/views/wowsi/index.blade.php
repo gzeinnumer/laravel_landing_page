@@ -9,8 +9,8 @@
 @include('wowsi.gulungan')
 
 @stop
-{{-- 
-@section('extra_modal2')
+
+{{-- @section('extra_modal2')
 
 @include('wowsi.modal-login')
 

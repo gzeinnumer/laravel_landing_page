@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>AdminLTE 3 | Log in (v2)</title>
+    <title>WOW SI 2022 | Sign In</title>
 
 
     <!-- Google Font: Source Sans Pro -->
@@ -28,10 +28,21 @@
     <!-- summernote -->
     <link rel="stylesheet" href="{{asset('dashboard/plugins/summernote/summernote-bs4.min.css')}}">
 
+    <link rel="stylesheet" href="  {{asset('css/style.css')}}
+  " />
+
+
+    {{-- Tab Ico --}}
+    <link rel="shortcut icon" type="image" href="asset/logo.ico" />
+
     <style>
-        .bg-rafi {
-            background: red;
-        }
+        body {
+            background: url("/asset/BgHomeAtas.svg");
+            
+            background-size: 100% auto;
+            background-repeat: repeat-y;
+            font-family: 'Inter', sans-serif;
+    }
     </style>
 </head>
 
@@ -40,60 +51,43 @@
 
 
     <div class="login-box">
-        
+        @include('layouts.partials.messages')
         <!-- /.login-logo -->
-        <div class="card card-outline card-primary">
+        <div class="card card-outline card-primary" style="border-top: 3px solid #7A7AE9;">
             <div class="card-body">
-                <p class="login-box-msg">Sign in to start your session</p>
+                <div class="row">
+                    <div class="col-5 d-flex flex-sm-column justify-content-center" >
+                        <a href="{{ route('wowsi.index') }}"><img src="asset/logo.png" width="120px" height="120px" alt="" style="margin-left: 15px" /></a>
+                    </div>
+                    <form class="col-7   " method="post" action="{{ route('login.perform') }}">
+                        <input type="hidden" name="_token" value="{{ csrf_token() }}" />
 
-                <form method="post" action="{{ route('login.perform') }}">
-                    <input type="hidden" name="_token" value="{{ csrf_token() }}" />
-
-                    @include('layouts.partials.messages')
-
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="username" name="username" value="{{ old('username') }}">
-                        <div class="input-group-append">
-                            <div class="input-group-text">
-                                <span class="fas fa-envelope"></span>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="username" name="username" value="{{ old('username') }}">
+                            <div class="input-group-append">
+                                <div class="input-group-text">
+                                    <span class="fas fa-envelope"></span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="input-group mb-3">
-                        <input type="password" class="form-control" placeholder="Password" name="password" value="{{ old('password') }}">
-                        <div class="input-group-append">
-                            <div class="input-group-text">
-                                <span class="fas fa-lock"></span>
+                        <div class="input-group mb-3">
+                            <input type="password" class="form-control" placeholder="Password" name="password" value="{{ old('password') }}">
+                            <div class="input-group-append">
+                                <div class="input-group-text">
+                                    <span class="fas fa-lock"></span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-8">
+                        <div class="row">
+                            <div class="col-2"></div>
+                            <div class="col-8 d-flex justify-content-center mb-1">  
+                                <button type="submit" class=" tombol3  btn  btn-block">Sign In</button>
+                            </div>
+                            <div class="col-2"></div>
                         </div>
-                        <!-- /.col -->
-                        <div class="col-4">
-                            <button type="submit" class="btn btn-primary btn-block">Sign In</button>
-                        </div>
-                        <!-- /.col -->
-                    </div>
-                </form>
-
-                <div class="social-auth-links text-center mt-2 mb-3">
-                    <a href="#" class="btn btn-block btn-primary">
-                        <i class="fab fa-facebook mr-2"></i> Sign in using Facebook
-                    </a>
-                    <a href="#" class="btn btn-block btn-danger">
-                        <i class="fab fa-google-plus mr-2"></i> Sign in using Google+
-                    </a>
+                        
+                    </form>
                 </div>
-                <!-- /.social-auth-links -->
-
-                <p class="mb-1">
-                    <a href="forgot-password.html">I forgot my password</a>
-                </p>
-                <p class="mb-0">
-                    <a href="register.html" class="text-center">Register a new membership</a>
-                </p>
             </div>
             <!-- /.card-body -->
         </div>
@@ -101,12 +95,10 @@
     </div>
     <!-- /.login-box -->
 
-    <button type="button" class="btn btn-default" data-toggle="modal" data-target="#modal-default">
+    {{-- MODAL --}}
+    {{-- <button type="button" class="btn btn-default" data-toggle="modal" data-target="#modal-default">
         Launch Default Modal
     </button>
-
-
-
     <div class="modal fade" id="modal-default">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -127,7 +119,7 @@
             <!-- /.modal-content -->
         </div>
         <!-- /.modal-dialog -->
-    </div>
+    </div> --}}
     <!-- /.modal -->
 
     <!-- jQuery -->

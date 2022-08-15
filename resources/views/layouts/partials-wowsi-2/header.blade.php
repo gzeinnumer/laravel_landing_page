@@ -5,7 +5,7 @@
         <img src="asset/logo.png" alt="" width="30" height="30" />
       </a>
 
-      <a class="navbar-brand fw-bolder" href="{{ route('wowsi.index') }}">WOWSI 2022</a>
+      <a class="navbar-brand fw-bolder" href="{{ route('wowsi.index') }}">WOW SI 2022</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>

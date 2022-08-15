@@ -51,7 +51,8 @@
                             <table class="table table-hover text-wrap">
                                 <thead>
                                     <tr>
-                                        <th>ID</th>
+                                        <th>NO</th>
+                                        {{-- <th>ID</th> --}}
                                         <th>Nama Penugasan</th>
                                         <th>Detail</th>
                                         <th>Link Submit</th>
@@ -62,7 +63,8 @@
                                 <tbody>
                                     @foreach($data as $d)
                                     <tr>
-                                        <td>{{$d->id}}</td>
+                                        <td>{{ $loop->iteration }}</td>
+                                        {{-- <td>{{$d->id}}</td> --}}
                                         <td>{{$d->nama_penugasan}}</td>
                                         <td>{{$d->detail}}</td>
                                         <td>{{$d->link_submit}}</td>

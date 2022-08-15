@@ -15,12 +15,8 @@
       <input type="text" class="form-control borklat" required name="username" value="{{ Auth::user()->username}}" readonly />
     </div>
 
-    {{-- <div class="col-md-6 mb-1">
-      <label class="form-label">NIM </label>
-      <input type="text" class="form-control borklat" required name="nim" value="{{ Auth::user()->nim}}" readonly />
-    </div> --}}
-
-    
+        {{-- DIEMIN AJA --}}
+      <input type="text" class="form-control borklat" required name="nim" value="{{ Auth::user()->nim}}" readonly hidden/>
 
 
     <div class="col-md-6 mb-1">

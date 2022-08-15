@@ -18,9 +18,10 @@
     @foreach($tugas as $d)
       <div class="quest mt-2 text-start ms-2">
         <h2 class="fw-bold">{{ $d->nama_penugasan }}</h2><br>
-        <h3>{{ $d->detail }}</h3><br>
+        <h3> {!! nl2br(e($d->detail)) !!}</h3><br>
+       
         <a href="http://{{ $d->link_submit }}"><h4>{{ $d->link_submit }}</h4><br></a>
-        <h4>{{ $d->deadline }}</h4>
+        <h4 style="margin-left: 20px">{{ $d->deadline }}</h4>
 
         <img src="asset/page break.png" width="100%" alt="" />
       </div>

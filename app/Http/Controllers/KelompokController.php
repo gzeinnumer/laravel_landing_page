@@ -12,7 +12,7 @@ class KelompokController extends Controller
 
 
     public function index()
-    {
+    { 
         // dd(Auth::user());
 
         $user = User::find(Auth::user()->id);
@@ -35,7 +35,7 @@ class KelompokController extends Controller
 
     public function create(Request $r)
     {
-        // return $r->all();
+        return $r->all();
         $data = new KelompokModel();
         $data->kelompok = $r->kelompok;
         $data->link_grup = $r->link_grup;
