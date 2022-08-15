@@ -28,7 +28,6 @@ Route::group(['middleware' => ['guest']], function () {
     // Route::get('/loginmasuk', [LoginIndexController::class, 'index'])->name('login.index');
     Route::get('/login', [LoginController::class, 'show'])->name('login.show');
     Route::post('/login', [LoginController::class, 'login'])->name('login.perform');
-    
 });
 
 Route::group(['middleware' => ['auth']], function () {
@@ -37,7 +36,7 @@ Route::group(['middleware' => ['auth']], function () {
 
 
     // WOWSI
-    
+
     // Penugasan WOWSI
     Route::get('/penugasan', [PenugasanController::class, 'index'])->name('wowsi-penugasan.index');
     // Edit AKun WOWSI
