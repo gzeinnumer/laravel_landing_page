@@ -1,5 +1,34 @@
 @extends('layouts.master-dashboard')
 
+@section('head_spesial')
+<!-- data tables -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.1/css/bootstrap.min.css" integrity="sha512-T584yQ/tdRR5QwOpfvDfVQUidzfgc2339Lc8uBDtcp/wYu80d7jwBgAxbyMh0a9YM9F8N3tdErpFI8iaGx6x5g==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+<!-- <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap4.min.css" />
+<link rel="stylesheet" href="https://cdn.datatables.net/rowreorder/1.2.8/css/rowReorder.bootstrap4.min.css" />
+
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap4.min.js"></script>
+<script src="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="https://cdn.datatables.net/rowreorder/1.2.8/js/dataTables.rowReorder.min.js"></script> -->
+
+<script src="{{asset('dashboard/plugins/jquery/jquery.min.js')}}"></script>
+
+
+<!-- DataTables  & Plugins -->
+<script src="{{asset('dashboard/plugins/datatables/jquery.dataTables.min.js')}}"></script>
+<script src="{{asset('dashboard/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js')}}"></script>
+<script src="{{asset('dashboard/plugins/datatables-responsive/js/dataTables.responsive.min.js')}}"></script>
+<script src="{{asset('dashboard/plugins/datatables-responsive/js/responsive.bootstrap4.min.js')}}"></script>
+<script src="{{asset('dashboard/plugins/datatables-buttons/js/dataTables.buttons.min.js')}}"></script>
+<script src="{{asset('dashboard/plugins/datatables-buttons/js/buttons.bootstrap4.min.js')}}"></script>
+<script src="{{asset('dashboard/plugins/jszip/jszip.min.js')}}"></script>
+<script src="{{asset('dashboard/plugins/pdfmake/pdfmake.min.js')}}"></script>
+<script src="{{asset('dashboard/plugins/pdfmake/vfs_fonts.js')}}"></script>
+<script src="{{asset('dashboard/plugins/datatables-buttons/js/buttons.html5.min.js')}}"></script>
+<script src="{{asset('dashboard/plugins/datatables-buttons/js/buttons.print.min.js')}}"></script>
+<script src="{{asset('dashboard/plugins/datatables-buttons/js/buttons.colVis.min.js')}}"></script>
+@stop
 @section('content')
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
@@ -84,7 +113,7 @@
 
                         </div>
                         <!-- /.card-header -->
-                        <div class="card-body table-responsive p-0">
+                        <div class="card-body">
                             <!-- <table class="table table-hover text-wrap">
                                 <thead>
                                     <tr>
@@ -122,8 +151,8 @@
 
                             <br> -->
                             <div class="row">
-                                <div class="col">
-                                    <table class="table table-hover text-wrap" id="myDatatable" style="width: 100%;">
+                                <div class="col-sm-12">
+                                    <table class="table table-bordered table-hover dataTable dtr-inline" id="myDatatable" style="width: 100%;">
                                         <thead>
                                             <tr>
                                                 <th>ID</th>
@@ -162,6 +191,11 @@
 <script type="text/javascript">
     $(function() {
         var table = $('#myDatatable').DataTable({
+            "paging": true,
+            "lengthChange": false,
+            "info": true,
+            "responsive": true,
+
             processing: true,
             serverSide: false,
             autowidth: false,
