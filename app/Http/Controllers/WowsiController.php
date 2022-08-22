@@ -16,19 +16,19 @@ class WowsiController extends Controller
         return view('wowsi.index', $sent);
     }
 
-    public function searchByNim(Request $r)
-    {
-        // dd($r->all());
+    // public function searchByNim(Request $r)
+    // {
+    //     // dd($r->all());
 
-        $data = User::where(["username" => $r->nimkelompok])->first();
+    //     $data = User::where(["username" => $r->nimkelompok])->first();
 
-        if ($data != null) {
-            $data->kelompoks = KelompokModel::find($data->id_kelompok);
-        }
-        $sent = [
-            "datas" => $data
-        ];
-        return view('wowsi.index', $sent);
-        // return redirect('/wowsisearch')->with($sent);
-    }
+    //     if ($data != null) {
+    //         $data->kelompoks = KelompokModel::find($data->id_kelompok);
+    //     }
+    //     $sent = [
+    //         "datas" => $data
+    //     ];
+    //     return view('wowsi.index', $sent);
+    //     // return redirect('/wowsisearch')->with($sent);
+    // }
 }

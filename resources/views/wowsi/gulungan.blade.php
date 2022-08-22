@@ -96,7 +96,7 @@
         <div class="col-sm-3 mt-3 mb-3"><img src="asset/guardiankanan.png" alt="" width="100%" /></div>
 
 
-        <div class="card" id="cari">
+        {{-- <div class="card" id="cari">
           <div class="card-body">
             @if($datas != null)
             <div class="d-flex justify-content-center">
@@ -116,7 +116,7 @@
             @endif
             @endif
           </div>
-        </div>
+        </div> --}}
 
 
 

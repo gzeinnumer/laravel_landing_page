@@ -13,6 +13,7 @@ use App\Http\Controllers\LoginIndexController;
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\WowsiController;
+use App\Http\Controllers\SearchController;
 use App\Http\Controllers\PenugasanController;
 use App\Http\Controllers\EditAkunController;
 use Illuminate\Support\Facades\App;
@@ -21,7 +22,7 @@ use Illuminate\Support\Facades\App;
 // WOWSI GUEST
 
 Route::get('/', [WowsiController::class, 'index'])->name('wowsi.index');
-Route::get('/wowsisearch', [WowsiController::class, 'searchByNim'])->name('wowsi.search');
+Route::get('/wowsisearch', [SearchController::class, 'searchByNim'])->name('wowsi.search');
 
 Route::group(['middleware' => ['guest']], function () {
 

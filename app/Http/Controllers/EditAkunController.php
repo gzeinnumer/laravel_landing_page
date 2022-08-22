@@ -19,7 +19,10 @@ class EditAkunController extends Controller
         // dd($r->all());
         $data = User::find($r->id);
         $data->nama_lengkap = $r->nama_lengkap;
-        $data->password = $r->password;        
+        // $data->password = $r->password;  
+        if ($r->password != ""){
+            $data->password = ($r->password);
+        }      
         $data->tempat_lahir = $r->tempat_lahir;
         $data->nim = $r->nim;
         $data->tanggal_lahir = $r->tanggal_lahir;
@@ -31,6 +34,6 @@ class EditAkunController extends Controller
         $data->jenis_kelamin = $r->jenis_kelamin;
         $data->save();
         
-        return redirect('/editakun');
+        return redirect('/editakun')->with('success', 'Update data baru sukses!');
     }
 }
