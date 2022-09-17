@@ -19,6 +19,10 @@
                         <textarea type="text" class="form-control" id="detail" name="detail" placeholder="Detail" required></textarea>
                     </div>
                     <div class="form-group">
+                        <label for="link_penting">Link Penting</label>
+                        <input type="text" class="form-control" id="link_penting" name="link_penting" placeholder="Link Penting" required>
+                    </div>
+                    <div class="form-group">
                         <label for="link_submit">Link Submit</label>
                         <input type="text" class="form-control" id="link_submit" name="link_submit" placeholder="Link Submit" required>
                     </div>

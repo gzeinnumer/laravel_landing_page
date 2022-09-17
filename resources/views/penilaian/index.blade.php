@@ -147,9 +147,8 @@
                                     </tr>
                                     @endforeach
                                 </tbody>
-                            </table>
+                            </table>-->
 
-                            <br> -->
                             <div class="row">
                                 <div class="col-sm-12">
                                     <table class="table table-bordered table-hover dataTable dtr-inline" id="myDatatable" style="width: 100%;">

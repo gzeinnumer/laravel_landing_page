@@ -59,10 +59,10 @@
 <body>
     <!-- kelompok    -->
     <div class="row m-auto" style="width: 90%">
-        <div class="tittle m-auto d-flex mb-5">
-            <img src="asset/logo.png" alt="" width="130" height="130" />
-            <div class="fw-bold ms-4 txt-shadow txt-tittle">
-                <p class="s text-uppercase">Kelompok</p>
+      <div class="tittle m-auto d-flex mb-5">
+          <img class="titleLogo " src="asset/logo.png" alt="" />
+          <div class="fw-bold ms-2 txt-shadow txt-tittle">
+              <p class="s">Kelompok</p>
             </div>
         </div>
 
@@ -113,6 +113,13 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+    </script>
+    <script type="application/javascript">
+      console.log(screen.width);
+      let witchKel = document.getElementById("witchKel")
+      if (screen.width <= 700) {
+          witchKel.style.display = "none"
+      }
     </script>
 </body>
 

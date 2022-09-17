@@ -39,6 +39,7 @@ class TugasController extends Controller
         $data = new TugasModel();
         $data->nama_penugasan = $r->nama_penugasan;
         $data->detail = $r->detail;
+        $data->link_penting = $r->link_penting;
         $data->link_submit = $r->link_submit;
         $data->deadline = $r->deadline;
         $data->save();
@@ -79,6 +80,7 @@ class TugasController extends Controller
         $data = TugasModel::find($id);
         $data->nama_penugasan = $r->nama_penugasan;
         $data->detail = $r->detail;
+        $data->link_penting = $r->link_penting;
         $data->link_submit = $r->link_submit;
         $data->deadline = $r->deadline;
         $data->save();

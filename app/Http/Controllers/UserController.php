@@ -32,6 +32,9 @@ class UserController extends Controller
     {
         // return "data";
         $data = User::all();
+        for ($i = 0; $i < count($data); $i++) {
+            $data[$i]->kelompoks = KelompokModel::find($data[$i]->id_kelompok);
+        }
         return $data;
     }
 

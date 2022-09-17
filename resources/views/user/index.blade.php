@@ -70,7 +70,7 @@
                                         <td>{{$d->email}}</td>
                                         <td>{{$d->nama_lengkap}}</td>
                                         <td>{{$d->username}}</td>
-                                        <td>{{$d->id_kelompok}}</td>
+                                        <td>{{$d->kelompoks->kelompok}}</td>
                                         <td>
                                             <a href="{{ route('user.delete' , [ 'id' => $d->id ]) }}" class="btn btn-danger btn-xs">Delete</a>
                                             <a href="{{ route('user.detailinfo' , [ 'id' => $d->id ]) }}" class="btn  btn-primary btn-xs">Info</a>

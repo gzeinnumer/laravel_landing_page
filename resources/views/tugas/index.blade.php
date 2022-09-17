@@ -55,6 +55,7 @@
                                         {{-- <th>ID</th> --}}
                                         <th>Nama Penugasan</th>
                                         <th>Detail</th>
+                                        <th>Link Penting</th>
                                         <th>Link Submit</th>
                                         <th>deadline</th>
                                         <th>Action</th>
@@ -67,6 +68,7 @@
                                         {{-- <td>{{$d->id}}</td> --}}
                                         <td>{{$d->nama_penugasan}}</td>
                                         <td>{{$d->detail}}</td>
+                                        <td>{{$d->link_penting}}</td>
                                         <td>{{$d->link_submit}}</td>
                                         <td>{{$d->deadline}}</td>
                                         <td>

@@ -1,9 +1,13 @@
  <!-- quest -->
  <div class="row m-auto" style="width: 90%">
-  <div class="tittle  d-flex mb-5 " style="margin-top: 100px">
-    <img src="asset/logo.png" alt="" width="130" height="130" />
-    <div class="fw-bold ms-4 txt-shadow txt-tittle"><p class="s">QUEST</p></div>
+
+  <div class="tittle m-auto d-flex mb-5 mar-top" style="width: 90%;">
+    <img class="titleLogo" src="asset/logo.png" alt="" />
+    <div class="fw-bold ms-2 txt-shadow txt-tittle">
+      <p class="s">QUEST</p>
+    </div>
   </div>
+  
 
   <div class="col text-center border-danger col-md-4 mt-2 mb-3">
     <br /><br />
@@ -18,9 +22,10 @@
     @foreach($tugas as $d)
       <div class="quest mt-2 text-start ms-2">
         <h2 class="fw-bold">{{ $d->nama_penugasan }}</h2><br>
-        <h3> {!! nl2br(e($d->detail)) !!}</h3><br>
-       
-        <a href="http://{{ $d->link_submit }}"><h4>{{ $d->link_submit }}</h4><br></a>
+        <h4> {!! nl2br(e($d->detail)) !!}</h4><br>
+        {{-- <a href="{!! nl2br(e($d->link_penting)) !!}"></a> --}}
+        <p>{!! nl2br(e($d->link_penting)) !!}</p>
+        <a href="http://{{ $d->link_submit }}"><p>{{ $d->link_submit }}</p><br></a>
         <h4 style="margin-left: 20px">{{ $d->deadline }}</h4>
 
         <img src="asset/page break.png" width="100%" alt="" />
