@@ -47,18 +47,20 @@
       <div class="row ms-auto me-auto " style="width: 100%;">
         <div class="col">
           <div class=" me-auto ms-auto mt-5"> <img src="asset/c1.svg" class="kotak" alt=""></div>
-          Chapter 1
+          <div class=" me-auto ms-auto " style="font-weight:700">Chapter 1</div>
+          <span class=" me-auto ms-auto">24 September</span>
         </div>
         <div class="col">
-          <div class="kotak me-auto ms-auto mt-5"> <img src="asset/c2.svg" class="kotak" alt=""></div>
-          Chapter 2
+          <div class=" me-auto ms-auto mt-5"> <img src="asset/c2.svg" class="kotak" alt=""></div>
+          <div class=" me-auto ms-auto " style="font-weight:700">Chapter 2</div>
+          <span class=" me-auto ms-auto">22 Oktober</span>
         </div>
-        <div class="col">
+        {{-- <div class="col">
           <div class="kotak me-auto ms-auto mt-5"> <img src="asset/c3.svg" class="kotak" alt=""></div>
           Chapter 3
-        </div>
+        </div> --}}
       </div>
-      <div class="row ms-auto me-auto " style="width: 85%;">
+      {{-- <div class="row ms-auto me-auto " style="width: 85%;">
         <div class=" col bg">
           <div class="kotak me-auto ms-auto mt-5"><img src="asset/c4.svg" class="kotak" alt=""></div>
           Chapter 4
@@ -67,7 +69,7 @@
           <div class="kotak me-auto ms-auto mt-5"><img src="asset/chest.svg" class="kotak" alt=""></div>
           Chapter 5
         </div>
-      </div>
+      </div> --}}
       <img src="asset/page break.png" width="100%" alt="" />
     </div>
     <!-- end of timeline -->
