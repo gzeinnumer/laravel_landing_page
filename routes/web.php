@@ -35,19 +35,14 @@ Route::group(['middleware' => ['auth']], function () {
 
     Route::get('/soon', [HomeController::class, 'index'])->name('soon');
 
-
     // WOWSI
 
     // Penugasan WOWSI
     Route::get('/penugasan', [PenugasanController::class, 'index'])->name('wowsi-penugasan.index');
+    
     // Edit AKun WOWSI
     Route::get('/editakun', [EditAkunController::class, 'index'])->name('wowsi-editakun.index');
     Route::post('/performeditakun', [EditAkunController::class, 'editdata'])->name('wowsi-editakun.perform');
-
-
-
-
-
     Route::get('/logout', [LogoutController::class, 'perform'])->name('logout.perform');
 
     Route::prefix('dashboardv2')->group(function () {
